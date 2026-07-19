@@ -1,5 +1,3 @@
-// 底部说明文档内容（复刻自 jianlou.indielog.cn/jiazheng/）
-
 export const jdActivities = [
   {
     q: '什么是「京东家政赠品」活动？',
