@@ -5,15 +5,14 @@ defineProps({
 </script>
 
 <template>
-  <article class="card">
-    <a
-      v-if="product.link"
-      class="thumb"
-      :href="product.link"
-      target="_blank"
-      rel="noopener noreferrer"
-      :aria-label="product.name"
-    >
+  <component
+    :is="product.link ? 'a' : 'article'"
+    class="card"
+    :href="product.link || undefined"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="thumb">
       <img
         v-if="product.img"
         :src="product.img"
@@ -21,24 +20,11 @@ defineProps({
         loading="lazy"
       />
       <div v-else class="thumb-empty">🛒</div>
-    </a>
-    <div v-else class="thumb">
-      <img v-if="product.img" :src="product.img" :alt="product.name" loading="lazy" />
-      <div v-else class="thumb-empty">🛒</div>
     </div>
 
     <div class="badge">{{ product.clean }}</div>
 
-    <h3 class="name">
-      <a
-        v-if="product.link"
-        :href="product.link"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="name-link"
-      >{{ product.name }}</a>
-      <template v-else>{{ product.name }}</template>
-    </h3>
+    <h3 class="name">{{ product.name }}</h3>
 
     <p class="bookable">第8天可约 · 7天有效</p>
 
@@ -53,7 +39,7 @@ defineProps({
         <span class="price-value">{{ product.price }}</span>
       </div>
     </div>
-  </article>
+  </component>
 </template>
 
 <style scoped>
@@ -69,10 +55,15 @@ defineProps({
   gap: 8px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+a.card:hover {
+  cursor: pointer;
 }
 .thumb {
   display: block;
@@ -101,13 +92,6 @@ defineProps({
   justify-content: center;
   font-size: 40px;
   background: #f3f4f6;
-}
-.name-link {
-  color: inherit;
-  text-decoration: none;
-}
-.name-link:hover {
-  color: var(--primary);
 }
 .badge {
   position: absolute;
