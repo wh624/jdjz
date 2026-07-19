@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { jdActivities, aboutSite } from '../data/info.js'
+import { jdActivities } from '../data/info.js'
 
 const open = ref(0)
 const toggle = (i) => (open.value = open.value === i ? -1 : i)
@@ -24,11 +24,6 @@ const toggle = (i) => (open.value = open.value === i ? -1 : i)
           <p v-for="(line, j) in item.a.split('\n')" :key="j">{{ line }}</p>
         </div>
       </div>
-    </div>
-
-    <h2 class="section-title">关于捡漏（JIANLOU.INDIELOG.CN）</h2>
-    <div class="about">
-      <p v-for="(p, i) in aboutSite.paragraphs" :key="i">{{ p }}</p>
     </div>
   </section>
 </template>

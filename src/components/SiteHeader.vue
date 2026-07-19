@@ -1,26 +1,10 @@
 <script setup>
 import { updateInfo } from '../data/products.js'
 
-const emit = defineEmits(['open-redpacket'])
-
-const stats = [
-  { label: '商品总数', value: updateInfo.total + ' 件' },
-  { label: '更新时间', value: updateInfo.updatedAt }
-]
 </script>
 
 <template>
   <header class="header">
-    <div class="topbar">
-      <a class="logo" href="#" @click.prevent>
-        <span class="logo-mark">捡</span>
-        <span class="logo-text">捡漏</span>
-      </a>
-      <button class="redpacket" @click="emit('open-redpacket')">
-        🧧 美团红包
-      </button>
-    </div>
-
     <h1 class="title">京东送家政商品汇总</h1>
 
     <div class="meta">

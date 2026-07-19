@@ -5,7 +5,6 @@ import SiteHeader from './components/SiteHeader.vue'
 import CategoryNav from './components/CategoryNav.vue'
 import ProductSection from './components/ProductSection.vue'
 import InfoSection from './components/InfoSection.vue'
-import SiteFooter from './components/SiteFooter.vue'
 
 const tabs = [
   { key: 'all', label: '分类浏览' },
@@ -60,13 +59,10 @@ const groups = computed(() => {
   return list.length ? [{ name: '', products: list }] : []
 })
 
-const openRedpacket = () => {
-  window.open('https://jianlou.indielog.cn/', '_blank')
-}
 </script>
 
 <template>
-  <SiteHeader @open-redpacket="openRedpacket" />
+  <SiteHeader  />
 
   <CategoryNav
     :tabs="tabs"
@@ -85,5 +81,4 @@ const openRedpacket = () => {
   </main>
 
   <InfoSection />
-  <SiteFooter />
 </template>
