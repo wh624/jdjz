@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { categories } from './data/products.js'
+import { categories } from './data/products.json'
 import SiteHeader from './components/SiteHeader.vue'
 import CategoryNav from './components/CategoryNav.vue'
 import ProductSection from './components/ProductSection.vue'

@@ -1,5 +1,5 @@
 <script setup>
-import { updateInfo } from '../data/products.js'
+import { updateInfo } from '../data/products.json'
 
 </script>
 

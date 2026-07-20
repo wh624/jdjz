@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { jdActivities } from '../data/info.js'
+import { jdActivities } from '../data/info.json'
 
 const open = ref(0)
 const toggle = (i) => (open.value = open.value === i ? -1 : i)
