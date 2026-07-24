@@ -1,8 +1,8 @@
 {
     "updateInfo": {
-        "date": "2026年07月23日",
-        "updatedAt": "2026-07-23 17:13:18",
-        "total": 122
+        "date": "2026年07月24日",
+        "updatedAt": "2026-07-24 10:49:24",
+        "total": 128
     },
     "keywords": [
         "牙膏",
@@ -24,562 +24,223 @@
     ],
     "categories": [
         {
-            "name": "衣物清洁/护理",
-            "products": [
-                {
-                    "name": "当妮香氛洗衣原液阳光栀子花1.6斤瓶装.持久留香",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjaxaP",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470485/12/17980/139521/6a50c0f0F5d559d99/0083320320a8295b.jpg"
-                },
-                {
-                    "name": "汰渍极净洗衣原液薰衣草1.6斤瓶装 去渍持久留香",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjOC8h",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480542/23/1031/160771/6a50c0d4Fe7350080/008332032008846a.jpg"
-                },
-                {
-                    "name": "碧浪衣原液夏日海风1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajP3SP",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/476080/20/14519/225913/6a584746Fff679f24/00833203205b927d.jpg"
-                },
-                {
-                    "name": "当妮香氛洗衣原液雪松小苍兰1.6斤瓶装 持久留香除菌家用正品洗衣液",
-                    "price": "¥58.00 - ¥65.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjgeMz",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/482453/15/1464/200648/6a54c1eaF4fc997b2/00833203203cf251.jpg"
-                },
-                {
-                    "name": "金纺高能护衣精华玫瑰朗姆酒700G",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjPoFZ",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/348157/10/17968/85255/69004948F603f1deb/91e9aa870151d15f.jpg"
-                },
-                {
-                    "name": "汰渍净渍洗衣原液薰衣草1.6斤瓶装 护色",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91juhVh",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/478330/34/5435/160771/6a50c0d5F11291978/008332032081403e.jpg"
-                },
-                {
-                    "name": "碧浪洗衣原液夏日海风1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjBr5k",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/449766/2/6751/225913/6a584747F6b09ebbd/008332032015089f.jpg"
-                },
-                {
-                    "name": "碧浪洗衣原液雨后初晴1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjgWNT",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480710/32/5550/224234/6a58474cF53871249/0083320320bce013.jpg"
-                },
-                {
-                    "name": "金纺衣物柔顺剂护理剂阳光桔柚2kg 除味防静电 除菌柔顺二合一",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96js0ga",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/425111/16/9636/163470/69f01ef5F63f12fb6/0083320320d2d9d7.jpg"
-                },
-                {
-                    "name": "汰渍极净洗衣原液雨后山茶花1.6斤瓶装 去渍持久留香除菌除螨 洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9aj84rv",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/476295/31/9206/180663/6a50c0ceF6d9d350a/0083320320546c51.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）快洗洗衣液洁净除味2kg 雪松柠檬15分钟速净快洗",
-                    "price": "¥58.00 - ¥65.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjyWyQ",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/263290/33/19870/139902/67aebb5aFdc618d67/aa7a48cccf28fa0d.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）洗衣好物樱花持久留香护色4斤校服净快洗洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jPWWq",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/420942/3/8373/202076/69e78b85Ff062f1f6/00833203202b8e37.jpg"
-                },
-                {
-                    "name": "OMO快洗洗衣液白衣亮白4斤 无荧光增白剂15分钟快洗专用",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjagap",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/423316/30/5749/160965/69e78b6fF1c5c19af/0083320320c74624.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）小苍兰香氛持久留香去汗味4斤校服净快洗洗衣液",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jqHD9",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421334/32/14589/135361/69e78b82F8759af38/0083320320e6f9ad.jpg"
-                },
-                {
-                    "name": "奥妙5星精油香护洗衣液玉龙雪山玫瑰袋装1KG 清香香氛柔软护色去味",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Djr9Pq",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/334641/9/11211/102923/68bfb475Ffae216c8/ce715d259f070fcb.jpg"
-                },
-                {
-                    "name": "奥妙五星精油5星洗衣液佛手柑茉莉2斤婴童去污清洁护色去味持久留香",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jY343",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/341512/5/1397/118337/68bfdf6bFd65ec1d8/94c239b7c3d268ed.jpg"
-                },
-                {
-                    "name": "金纺高能护衣精华薰衣草小苍兰700G",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jaRcM",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/350791/3/18295/93237/6900498eF19441b0c/aaa7a2d30b9ddfa6.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）快洗洗衣液洁净除味1.2kg 15分钟速净快洗专用",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Oj6FiV",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/264370/10/19627/154020/67aebb10F1260398b/c3c4fc297fb2c705.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）樱花去毛球持久留香2.4斤快洗速净洗衣液",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajOc71",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421631/29/10564/201147/69e8c141F523411d9/00833203200f0d47.jpg"
-                },
-                {
-                    "name": "OMO吴磊推荐快洗洗衣液白衣亮白2.4斤0荧光增白剂留香立白去黄",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjgDS6",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
-                },
-                {
-                    "name": "奥妙5星精油香护洗衣液玉龙雪山玫瑰 2KG 清香香氛柔软护色去味",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjP8ZP",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/286113/23/12402/121723/68906f8eF0b90d937/e107e44f04670d0e.jpg"
-                },
-                {
-                    "name": "奥妙（OMO）小苍兰速净香氛持久留香运动去味2.4斤快洗洗衣液",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jqqKk",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/424955/31/54/130913/69e78ba5F75763264/00833203201353e0.jpg"
-                },
-                {
-                    "name": "OMO快洗洗衣液白衣亮白2.4斤0荧光增白剂留香立白去黄",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjggUQ",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
-                },
-                {
-                    "name": "OMO快洗洗衣液白衣亮白2.4斤 不含荧光增白剂15分钟速净",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjStN7",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
-                }
-            ]
-        },
-        {
-            "name": "洗发护发",
-            "products": [
-                {
-                    "name": "海飞丝头皮肌底净爽止痒去屑洗发水360g男士女士【赠2小时家政】",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jTuyJ",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472097/11/274/129597/6a437831F9d858f62/0083320320dc6e48.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】三明治金粹修护发膜180G",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjDQDg",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/423367/32/12392/158780/69eb61e0Fa162b657/0083320320a2dbbf.jpg"
-                },
-                {
-                    "name": "海飞丝玫瑰双抗洗发水360g控油蓬松香氛去屑男女士水杨酸洗头膏头皮肌底",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjPtrv",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473905/14/1068/143370/6a45dfd5F5e70f6d7/0083320320ed4ff8.jpg"
-                },
-                {
-                    "name": "海飞丝头皮肌底控油蓬松洗发水360g去屑男女士【赠2小时家政】",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj3xjf",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/458504/26/19794/128973/6a4377f9F5876b027/0083320320fc4742.jpg"
-                },
-                {
-                    "name": "海飞丝头皮肌底盈润修护洗发水360g男士女士补水去屑【赠2小时家政】",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj8Zls",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/460835/38/16545/120083/6a437830F0c7ea3e6/00833203208c366b.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】三分钟奇迹护发精油山茶花香40ml",
-                    "price": "¥62.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Gjnn9F",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421819/13/1351/212384/69e08e5bF8cddfbee/0083400400083627.jpg"
-                },
-                {
-                    "name": "海飞丝去屑0硅油洗发水650ml呵护赋活男士女士",
-                    "price": "¥62.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jvPOv",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464796/37/13274/169541/6a4377fcFdf54845c/008332032019dec2.jpg"
-                },
-                {
-                    "name": "海飞丝头皮预洗凝露10g*7控油蓬松改善油扁塌深层清洁【赠2小时家政】",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jrsDp",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/463416/39/9524/147025/6a6031f3Fcea69370/008332032006ebc9.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】清柚苍兰香控油洗发水300g",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjBAEl",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/425561/34/11430/147016/69f08a97F080464e7/00833203200e4738.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】三分钟迹桃桃洗发水白桃乌龙香300g",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jG4PU",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/428432/20/3010/127911/69f08a98Fa3a70173/0083320320d94ed3.jpg"
-                },
-                {
-                    "name": "海飞丝头皮肌底控油蓬松洗发水670g去屑男女士【赠2小时家政】",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9aj0jKG",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/465746/26/19519/139409/6a4b194eFcb517b75/0083320320fc6798.jpg"
-                },
-                {
-                    "name": "海飞丝青少年洗发水360g控油蓬松去屑去味13-18岁青春期男女孩适用",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj0KYT",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472358/2/8174/129375/6a4b19c3F357cf050/00833203202e96dc.jpg"
-                },
-                {
-                    "name": "髮の食谱发之食谱梨洗发水530g蓬松洗发露柔顺留香京东自营【送家政】",
-                    "price": "¥71.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jSMO5",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/485810/2/2968/92110/6a5ee085Fcf65bd9c/0083320320dc3bcc.jpg"
-                },
-                {
-                    "name": "潘婷3分钟奇迹洗发水茉莉山茶香470g",
-                    "price": "¥72.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjaygA",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472882/39/11069/155700/6a4f734fF1c2858f2/008332032006c3e1.jpg"
-                },
-                {
-                    "name": "海飞丝专研去屑控油洗发水300g专利配方男女洗头膏洗发露 赠2小时家政",
-                    "price": "¥72.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jOkOH",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/465757/27/10812/156820/6a43785fFbb9c76b3/0083320320d833dd.jpg"
-                },
-                {
-                    "name": "海飞丝专研去屑止痒洗发水300g配方舒痒男女洗头膏洗发露赠2小时家政",
-                    "price": "¥72.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjalsb",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471471/36/437/161416/6a43784eF09f8b2df/0083320320893e59.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】3分钟奇迹护发精油雪松玫瑰香90ml",
-                    "price": "¥82.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9aj0EXW",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419855/15/8903/141043/69e09303F2485841a/00833203202dc001.jpg"
-                },
-                {
-                    "name": "潘婷赠京东家政2小时【赠完即止】3分钟奇迹修护精华油清柚苍兰香90ml",
-                    "price": "¥82.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Djnl24",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/442973/13/6775/119947/6a194bb6F17e55a10/008332032017cd4d.jpg"
-                },
-                {
-                    "name": "力士精油香氛洗发露470ml无花果铃兰香",
-                    "price": "¥84.00",
-                    "clean": "买2送2小时",
-                    "link": "https://u.jd.com/9OjQg3U",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/442915/7/8361/103258/6a1ea31eF6016dc00/0083320320dd1865.png"
-                },
-                {
-                    "name": "力士精油香氛洗发露470ml雪松栀子",
-                    "price": "¥84.00",
-                    "clean": "买2送2小时",
-                    "link": "https://u.jd.com/9DjpKM8",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/305369/12/25899/122083/68994fdaFf06a0fcd/bd8ff36ad5248c07.jpg"
-                },
-                {
-                    "name": "力士田曦薇同款精油香氛洗发露470ml雪松栀子",
-                    "price": "¥84.00",
-                    "clean": "买2送2小时",
-                    "link": "https://u.jd.com/91jraLk",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/305369/12/25899/122083/68994fdaFf06a0fcd/bd8ff36ad5248c07.jpg"
-                },
-                {
-                    "name": "力士白桃茉莉香氛蓬松洗发水470gx2 玻尿酸洗发露",
-                    "price": "¥93.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Oja1gt",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/291836/36/21907/56767/689064abFfc1d1039/fad8de84b187e86a.png"
-                },
-                {
-                    "name": "潘婷赠2小时京东家政【赠完即止】胶囊护发精油精华油柑橘留香50颗",
-                    "price": "¥122.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Djg878",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447326/10/11968/121278/6a293edaF663f40a8/0083320320a515bd.jpg"
-                },
-                {
-                    "name": "NEXXUS檀健次同款 耐致弹性蛋白丰盈护理发膜200ml 蓬松高颅顶京东自营",
-                    "price": "¥231.00",
-                    "clean": "买1送2小时×2",
-                    "link": "https://u.jd.com/9rjvuWO",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/300131/36/5812/53331/6822198aFd576ad3c/9c9d1512c446d36d.jpg"
-                }
-            ]
-        },
-        {
             "name": "身体护理",
             "products": [
                 {
+                    "name": "舒肤佳洗手泡泡绵片10片 外出旅行便携式 一次性洗手香皂片",
+                    "price": "¥64.00",
+                    "clean": "买4送2小时",
+                    "link": "https://u.jd.com/9ORMkaR",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480038/14/815/109948/6a4f7322Fc30630a9/00833203208ec479.jpg"
+                },
+                {
                     "name": "力士（LUX）力士心情香氛沐浴露茉莉琥珀香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Gj63wn",
+                    "link": "https://u.jd.com/9aRuuBo",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/411179/36/329/185380/69c5f593F3440fa74/00833203209ad0f3.jpg"
                 },
                 {
-                    "name": "舒肤佳净透泡沫沐浴露 山茶花400g+红石榴400g 持久留香 男女通用",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91j2HoH",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473241/35/3696/113049/6a47865dFaf9bb1ec/00833203201e2cfe.jpg"
-                },
-                {
-                    "name": "舒肤佳全新净透沐浴露千禧玫瑰香380g添加泛醇果酸莹润留香 男女士通用",
-                    "price": "¥58.00 - ¥65.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Dj1Tzj",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/474064/1/12930/107924/6a4f5127Fe470d5c8/0083320320a8d48b.jpg"
-                },
-                {
-                    "name": "舒肤佳净透沐浴露樱花香570g 添加精油果酸焕亮 持久留香",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjWhnv",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473994/8/3152/123202/6a478662F05909761/0083320320c03457.jpg"
-                },
-                {
-                    "name": "舒肤佳健康美护沐浴露小紫瓶柔雾玫瑰400g温和舒缓敏感肌用新老包装随机",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jOBl7",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464406/28/16645/107522/6a478652Fb30f4db8/0083320320b7ee02.jpg"
-                },
-                {
-                    "name": "OLAY精华沐浴露全新烟酰胺深入滋润500g奶绒檀木香含神经酰胺留香男女",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Oj1CR7",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471988/19/1496/89917/6a447a2fF37516977/00833203209061e7.jpg"
-                },
-                {
-                    "name": "舒肤佳健康净护沐浴露 纯白650g+樱花香650g 沐浴乳液新旧包装随机",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96j1Ju8",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464223/11/20657/120654/6a478655F273c9d60/0083320320f00d28.jpg"
-                },
-                {
-                    "name": "舒肤佳健康净护沐浴露纯白清香650g+薰衣草香650g",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjQsau",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/475232/14/1081/116121/6a478653F01e9ba2c/0083320320fccf57.jpg"
-                },
-                {
                     "name": "力士（LUX）力士心情香氛沐浴露墨兰乌木香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajBFAo",
+                    "link": "https://u.jd.com/9ORt9WO",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/407221/36/13531/237044/69c5f593Fe2532b83/008332032098d6c7.jpg"
                 },
                 {
                     "name": "多芬（Dove）精华沐浴露氨基酸滋润保湿甜草莓香430g（新老包装交替发货）",
-                    "price": "¥58.00 - ¥65.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjTf3I",
+                    "link": "https://u.jd.com/96RGoPA",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/436806/7/362/174164/6a03ed06F09d79444/008332032044cd92.jpg"
                 },
                 {
                     "name": "多芬（Dove）精华沐浴露氨基酸滋润保湿青柠莓莓430g（新老包装交替发货）",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jrXVn",
+                    "link": "https://u.jd.com/9aRtLHY",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/403807/23/1624/181136/69b3c20dF54a11bc3/00833203208a52ea.jpg"
                 },
                 {
                     "name": "多芬（Dove）精华沐浴露鲜嫩水灵多肉青提香430g留香沐浴乳",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjS39U",
+                    "link": "https://u.jd.com/9GRn28c",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/433693/18/6362/167542/6a03ed06Fbb1e2b3b/0083320320055a46.jpg"
                 },
                 {
-                    "name": "舒肤佳抑菌洗手液 420g*3瓶(纯白*2+柠檬)健康抑菌99.9%",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjOdbs",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/475181/4/15843/95091/6a5758faFdb537d81/00833203201d2eaa.jpg"
-                },
-                {
-                    "name": "OLAY精华沐浴露细腻柔滑500g铃兰柑橘香添加烟酰胺",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jp0FQ",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470634/1/3183/88499/6a447a29Fe75f0dec/0083320320f7765b.jpg"
-                },
-                {
-                    "name": "舒肤佳净透沐浴露乌木玫瑰380g添加胜肽紧致持久留香",
-                    "price": "¥58.00 - ¥65.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajDGAk",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/479752/26/743/117810/6a4f512aF3bc48914/0083320320dbf510.jpg"
-                },
-                {
                     "name": "力士（LUX）力士心情香氛沐浴露竹林青柚香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jqRLI",
+                    "link": "https://u.jd.com/9aRguXy",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/410330/1/4316/195786/69c5f555F72b17c91/0083320320b9fdff.jpg"
                 },
                 {
                     "name": "力士（LUX）气泡爽肤香氛沐浴露清橘海盐香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jQSsF",
+                    "link": "https://u.jd.com/9gRuWlQ",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/394947/24/1475/139429/698130cdF133a1fd8/00833203209609fc.jpg"
                 },
                 {
-                    "name": "舒肤佳咖啡栗香奶咖香净透沐浴露570g 添加泛醇果酸",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jZv2K",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470514/20/3127/100359/6a447a38F937b22c1/0083320320de8d06.jpg"
-                },
-                {
-                    "name": "舒肤佳微醺暖夜香净透沐浴露570g添加泛醇果酸滋润丝滑肌",
-                    "price": "¥58.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj6cf3",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472776/7/724/117805/6a447a3aFdcf68ddd/0083320320f09814.jpg"
-                },
-                {
                     "name": "力士（LUX）气泡爽肤香氛沐浴露元气葡萄香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9aj0PYL",
+                    "link": "https://u.jd.com/96RGfDk",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/431819/27/21947/198776/6a0ac961Fd3543309/0083320320a772e6.jpg"
                 },
                 {
                     "name": "力士（LUX）力士(LUX)沐浴露 气泡爽肤香氛沐浴露白桃香690g",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjyZKr",
+                    "link": "https://u.jd.com/9rRvNBP",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/389758/8/12734/187947/69813088Fd54fbf8a/00833203205d7c54.jpg"
                 },
                 {
                     "name": "力士（LUX）气泡爽肤香氛沐浴露沁玫荔枝香690g清爽",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9aj1SkI",
+                    "link": "https://u.jd.com/9ORs4JY",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/393075/12/8864/207651/698131d8F81d008fd/0083320320ab6b94.jpg"
                 },
                 {
                     "name": "力士（LUX）植萃精油香氛沐浴露玉龙雨茶香550g柔嫩光滑",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jS6mJ",
+                    "link": "https://u.jd.com/9rRDn5u",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/392692/35/9776/160914/69813158Ff898bc71/00833203206fba66.jpg"
                 },
                 {
-                    "name": "OLAY水润沐浴露舒柔滋润保湿洋甘菊730ml",
-                    "price": "¥58.00",
+                    "name": "舒肤佳净透泡沫沐浴露 山茶花400g+红石榴400g 持久留香 男女通用",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jY0QQ",
+                    "link": "https://u.jd.com/9rR6s7s",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473241/35/3696/113049/6a47865dFaf9bb1ec/00833203201e2cfe.jpg"
+                },
+                {
+                    "name": "舒肤佳全新净透沐浴露千禧玫瑰香380g添加泛醇果酸莹润留香 男女士通用",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRiaqS",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/474064/1/12930/107924/6a4f5127Fe470d5c8/0083320320a8d48b.jpg"
+                },
+                {
+                    "name": "舒肤佳净透沐浴露樱花香570g 添加精油果酸焕亮 持久留香",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91RiVdB",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473994/8/3152/123202/6a478662F05909761/0083320320c03457.jpg"
+                },
+                {
+                    "name": "舒肤佳健康美护沐浴露小紫瓶柔雾玫瑰400g温和舒缓敏感肌用新老包装随机",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aR3nkG",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464406/28/16645/107522/6a478652Fb30f4db8/0083320320b7ee02.jpg"
+                },
+                {
+                    "name": "OLAY精华沐浴露全新烟酰胺深入滋润500g奶绒檀木香含神经酰胺留香男女",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORMxwa",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471988/19/1496/89917/6a447a2fF37516977/00833203209061e7.jpg"
+                },
+                {
+                    "name": "舒肤佳健康净护沐浴露 纯白650g+樱花香650g 沐浴乳液新旧包装随机",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96ROVuR",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464223/11/20657/120654/6a478655F273c9d60/0083320320f00d28.jpg"
+                },
+                {
+                    "name": "舒肤佳健康净护沐浴露纯白清香650g+薰衣草香650g",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DHh8dt",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/475232/14/1081/116121/6a478653F01e9ba2c/0083320320fccf57.jpg"
+                },
+                {
+                    "name": "舒肤佳抑菌洗手液 420g*3瓶(纯白*2+柠檬)健康抑菌99.9%",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96RdorM",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/475181/4/15843/95091/6a5758faFdb537d81/00833203201d2eaa.jpg"
+                },
+                {
+                    "name": "OLAY精华沐浴露细腻柔滑500g铃兰柑橘香添加烟酰胺",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DR6nVK",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470634/1/3183/88499/6a447a29Fe75f0dec/0083320320f7765b.jpg"
+                },
+                {
+                    "name": "舒肤佳净透沐浴露乌木玫瑰380g添加胜肽紧致持久留香",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRzvHO",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/479752/26/743/117810/6a4f512aF3bc48914/0083320320dbf510.jpg"
+                },
+                {
+                    "name": "舒肤佳咖啡栗香奶咖香净透沐浴露570g 添加泛醇果酸",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRQzvg",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470514/20/3127/100359/6a447a38F937b22c1/0083320320de8d06.jpg"
+                },
+                {
+                    "name": "舒肤佳微醺暖夜香净透沐浴露570g添加泛醇果酸滋润丝滑肌",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRiatU",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472776/7/724/117805/6a447a3aFdcf68ddd/0083320320f09814.jpg"
+                },
+                {
+                    "name": "OLAY水润沐浴露舒柔滋润保湿洋甘菊730ml",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96R2BKp",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/462828/25/18051/99938/6a447a30F2903aa41/00833203205be24b.jpg"
                 },
                 {
-                    "name": "舒肤佳洗手泡泡绵片10片 外出旅行便携式 一次性洗手香皂片",
-                    "price": "¥60.00",
-                    "clean": "买4送2小时",
-                    "link": "https://u.jd.com/9Gj0qNT",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480038/14/815/109948/6a4f7322Fc30630a9/00833203208ec479.jpg"
-                },
-                {
                     "name": "舒肤佳免洗洗手液抑菌杀菌消毒免洗手消毒凝胶56ml含酒精儿童便携式",
-                    "price": "¥60.00",
+                    "price": "¥66.00",
                     "clean": "买3送2小时",
-                    "link": "https://u.jd.com/9aj15d4",
+                    "link": "https://u.jd.com/96RIgcs",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/470889/36/13644/105100/6a4dedcbFfb866a1e/008332032018374c.jpg"
                 },
                 {
                     "name": "力士（LUX）植萃精油香氛磨砂沐浴露粉柚香400g 温和清洁去角质",
-                    "price": "¥73.00",
+                    "price": "¥80.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jqSml",
+                    "link": "https://u.jd.com/9rR3iQ1",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/440323/5/3972/184869/6a13fcc4F8c8a481c/008332032067be9d.jpg"
                 },
                 {
+                    "name": "妮维雅（NIVEA）特润修护霜400ml*2舒缓润肤修护敏感滋润补水干痒B5大白罐身体乳",
+                    "price": "¥119.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gR3A8J",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/470923/35/18948/113568/6a59baa4F7b8fb00b/0083320320d32158.jpg"
+                },
+                {
                     "name": "凡士林水感透亮高倍防晒精华60g SPF50PA++++持久防晒防水防汗清透不腻",
-                    "price": "¥124.00",
+                    "price": "¥130.00",
                     "clean": "买2送2小时",
-                    "link": "https://u.jd.com/9Gjq8pS",
+                    "link": "https://u.jd.com/96R2cUD",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/394673/10/10463/116521/698d6d2bF9803cdff/008332032088c5b2.jpg"
                 },
                 {
                     "name": "OLAY长效滋润精华身体乳360g椰奶香添加面护精华烟酰胺持久留香男女",
                     "price": "¥134.00",
                     "clean": "买2送2小时×2",
-                    "link": "https://u.jd.com/9Gj0dvs",
+                    "link": "https://u.jd.com/9gRMyv0",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/473732/4/11110/89054/6a4ded56Fe0a9ecd9/008332032063fe49.jpg"
                 },
                 {
                     "name": "OLAY长效滋润精华身体乳360g山茶花香含面护精华烟酰胺持久留香男女士",
                     "price": "¥134.00",
                     "clean": "买2送2小时×2",
-                    "link": "https://u.jd.com/91jnb82",
+                    "link": "https://u.jd.com/9DRGE8v",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/474395/25/9952/88558/6a4ded55F98609b35/0083320320a7a39a.jpg"
                 }
             ]
@@ -589,122 +250,496 @@
             "products": [
                 {
                     "name": "佳洁士焕齿白健康美白护釉牙膏去黄去渍清新口气100g京东自营",
-                    "price": "¥58.00",
+                    "price": "¥64.00",
                     "clean": "买2送2小时",
-                    "link": "https://u.jd.com/9DjpILc",
+                    "link": "https://u.jd.com/96ROFo2",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/463873/32/18049/81000/6a44f238F72721116/008332032095cf9e.jpg"
                 },
                 {
                     "name": "佳洁士焕齿白健康美白养龈牙膏去黄去渍清新口气100g京东自营",
-                    "price": "¥58.00",
+                    "price": "¥64.00",
                     "clean": "买2送2小时",
-                    "link": "https://u.jd.com/91jpFv7",
+                    "link": "https://u.jd.com/91RtaHa",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/464766/23/15407/78907/6a44f238F1d85166c/00833203205b4a4f.jpg"
                 },
                 {
                     "name": "益周适【胡兵推荐】强韧护龈成人牙膏套装220g含氟防蛀去牙菌斑京东自营",
-                    "price": "¥58.00",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jTO0l",
+                    "link": "https://u.jd.com/91RCxg4",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/472128/32/312/127906/6a437b33Fb73b7832/00833203206db077.jpg"
                 },
                 {
-                    "name": "中华钻光白牙膏美白去黄清新口气白桃味120g*2支",
-                    "price": "¥59.00",
+                    "name": "中华皓齿焕白牙膏去渍去黄修护牙釉质薄荷味120g*2支",
+                    "price": "¥66.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjYFde",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/429870/9/9285/121139/69fafe16Fce6a0807/0083320320ab6648.jpg"
-                },
-                {
-                    "name": "中华爆珠炫白牙膏速净牙菌斑森林冰薄味120g*2支 京东自营",
-                    "price": "¥59.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjyETt",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471563/34/1902/192219/6a449028F75cba509/0083320320e3e8a1.png"
-                },
-                {
-                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*2支 京东自营",
-                    "price": "¥59.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjWZ6a",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/461698/29/19123/257445/6a4490e6F02c3b16a/0083320320c71ccc.png"
-                },
-                {
-                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*1支",
-                    "price": "¥60.00",
-                    "clean": "买2送2小时",
-                    "link": "https://u.jd.com/9DjW0iV",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480492/18/6993/258284/6a58b043F8ced3f95/008332032013085f.jpg"
-                },
-                {
-                    "name": "中华钻光白牙膏美白去黄清新口气白桃味120g*3支",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjrQgd",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/431019/6/4602/129670/69fafd9aFa6cb443a/008332032095a093.jpg"
-                },
-                {
-                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*3支",
-                    "price": "¥63.00 - ¥70.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rj6Ncb",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/448197/19/11650/212471/6a58b0b1F8c7f1385/008332032034d944.jpg"
-                },
-                {
-                    "name": "中华清氧焕白牙膏清新口气温和呵护牙釉质白桃味120g*3支 京东自营",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajZDZ9",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/405474/37/2464/100555/69b921c2F393650c0/00833203205ccb9f.jpg"
-                },
-                {
-                    "name": "冷酸灵美白抗敏小苏打成人牙膏(清润蜜果)120g 清新口气【送家政卡】",
-                    "price": "¥63.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjpXJc",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/384896/29/7933/63641/69609d0eF677e3f2c/7d48e82de6ff1c94.jpg"
+                    "link": "https://u.jd.com/9DRGm8c",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/478195/35/13177/511154/6a5e0f55F48f8b7ae/0083320320c3c1be.png"
                 },
                 {
                     "name": "中华磁吸护白牙膏抗牙渍抗牙损海风冰薄香120g*2支",
                     "price": "¥66.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Gj3623",
+                    "link": "https://u.jd.com/9rR8eSN",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/471715/40/11329/181490/6a4cc3daFa6becfc6/0083320320eee944.jpg"
                 },
                 {
-                    "name": "益周适【胡兵推荐】强韧护龈成人牙膏套装110g*3去除牙菌斑",
-                    "price": "¥69.00",
+                    "name": "中华钻光白牙膏美白去黄清新口气白桃味120g*2支",
+                    "price": "¥66.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjYzVp",
+                    "link": "https://u.jd.com/9gRsqt0",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/429870/9/9285/121139/69fafe16Fce6a0807/0083320320ab6648.jpg"
+                },
+                {
+                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*1支",
+                    "price": "¥66.00",
+                    "clean": "买2送2小时",
+                    "link": "https://u.jd.com/9DRw6Z8",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480492/18/6993/258284/6a58b043F8ced3f95/008332032013085f.jpg"
+                },
+                {
+                    "name": "中华爆珠炫白牙膏速净牙菌斑森林冰薄味120g*2支 京东自营",
+                    "price": "¥66.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aR1Ojm",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471563/34/1902/192219/6a449028F75cba509/0083320320e3e8a1.png"
+                },
+                {
+                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*2支 京东自营",
+                    "price": "¥66.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRLfqX",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/461698/29/19123/257445/6a4490e6F02c3b16a/0083320320c71ccc.png"
+                },
+                {
+                    "name": "中华钻光白牙膏美白去黄清新口气白桃味120g*3支",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRy8x0",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/431019/6/4602/129670/69fafd9aFa6cb443a/008332032095a093.jpg"
+                },
+                {
+                    "name": "中华磁吸焕白牙膏抗牙黄抗牙石美白去渍辰息冰薄香120g*3支",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRig9K",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/448197/19/11650/212471/6a58b0b1F8c7f1385/008332032034d944.jpg"
+                },
+                {
+                    "name": "中华清氧焕白牙膏清新口气温和呵护牙釉质白桃味120g*3支 京东自营",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRyTRo",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/405474/37/2464/100555/69b921c2F393650c0/00833203205ccb9f.jpg"
+                },
+                {
+                    "name": "冷酸灵美白抗敏小苏打成人牙膏(清润蜜果)120g 清新口气【送家政卡】",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91RLPQO",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/384896/29/7933/63641/69609d0eF677e3f2c/7d48e82de6ff1c94.jpg"
+                },
+                {
+                    "name": "益周适【胡兵推荐】强韧护龈成人牙膏套装110g*3去除牙菌斑",
+                    "price": "¥76.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORdwDz",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/461807/1/8910/139436/6a5a097bFd6f75752/00833203206a2246.jpg"
                 },
                 {
                     "name": "益周适【胡兵推荐】清新护龈成人牙膏套装330g牙龈修护含氟防蛀京东自营",
-                    "price": "¥69.00",
+                    "price": "¥76.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjP5bS",
+                    "link": "https://u.jd.com/9aRsSSv",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/457635/18/12017/139424/6a37a17bF8712cf29/008332032017fe6a.jpg"
                 },
                 {
                     "name": "益周适【胡兵推荐】护龈成人牙膏套装330g含氟去渍美白清新口气京东自营",
-                    "price": "¥69.00",
+                    "price": "¥76.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjPJhR",
+                    "link": "https://u.jd.com/9GRws9i",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/464355/6/366/140134/6a379fafFd7ad9ee2/0083320320e1d9c3.jpg"
                 },
                 {
                     "name": "益周适强韧护安心美白组合牙膏3支装(110g+100g*2)清新口气去除牙釉质",
-                    "price": "¥70.00",
+                    "price": "¥77.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/91jBUNx",
+                    "link": "https://u.jd.com/9OR2NYp",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/462387/30/2567/125357/6a37a956F5c039539/008332032031b828.jpg"
+                }
+            ]
+        },
+        {
+            "name": "衣物清洁/护理",
+            "products": [
+                {
+                    "name": "金纺香氛衣物护理剂扁桃仁奶香瓶装 1KG",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORb3Ap",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/460814/31/18564/57858/6a4229d0F827cad8e/008323223238ad1c.jpg"
                 },
                 {
-                    "name": "云南白药牙膏光钻礼盒去黄去渍美白抗敏抗龋桂花105g*2+缤果105g*2",
-                    "price": "¥92.00",
+                    "name": "金纺香氛衣物护理剂鸢尾香型瓶装 1KG",
+                    "price": "¥65.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Dj33TB",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/483234/26/5421/152082/6a5dd4ffF4496aac6/0083320320843a75.jpg"
+                    "link": "https://u.jd.com/9aRiMf9",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464253/38/12604/61327/6a4229d3Fdc0b778b/0083232232808a9c.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）快洗洗衣液洁净除味2kg 雪松柠檬15分钟速净快洗",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORMONt",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/263290/33/19870/139902/67aebb5aFdc618d67/aa7a48cccf28fa0d.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）洗衣好物樱花持久留香护色4斤校服净快洗洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRLkdF",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/420942/3/8373/202076/69e78b85Ff062f1f6/00833203202b8e37.jpg"
+                },
+                {
+                    "name": "OMO快洗洗衣液白衣亮白4斤 无荧光增白剂15分钟快洗专用",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91R6GuQ",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/423316/30/5749/160965/69e78b6fF1c5c19af/0083320320c74624.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）小苍兰香氛持久留香去汗味4斤校服净快洗洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91RCQvD",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421334/32/14589/135361/69e78b82F8759af38/0083320320e6f9ad.jpg"
+                },
+                {
+                    "name": "奥妙5星精油香护洗衣液玉龙雪山玫瑰袋装1KG 清香香氛柔软护色去味",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRsmhb",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/334641/9/11211/102923/68bfb475Ffae216c8/ce715d259f070fcb.jpg"
+                },
+                {
+                    "name": "奥妙五星精油5星洗衣液佛手柑茉莉2斤婴童去污清洁护色去味持久留香",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRKmDQ",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/341512/5/1397/118337/68bfdf6bFd65ec1d8/94c239b7c3d268ed.jpg"
+                },
+                {
+                    "name": "当妮香氛洗衣原液阳光栀子花1.6斤瓶装 持久留香",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRQtZQ",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/488973/27/2069/165216/6a61e475Ffdf15d20/0083320320be9e12.jpg"
+                },
+                {
+                    "name": "碧浪衣原液夏日海风1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91R11vY",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/482470/38/8312/227703/6a61e46aF433fc880/00833203200a4622.jpg"
+                },
+                {
+                    "name": "当妮香氛洗衣原液雪松小苍兰1.6斤瓶装 持久留香除菌家用正品洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRs8eO",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/483753/8/6566/155743/6a61e478F121631a5/0083320320c6b062.jpg"
+                },
+                {
+                    "name": "汰渍净渍洗衣原液薰衣草1.6斤瓶装 护色",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORwlzV",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/461859/30/8897/159077/6a61e461F4e7b8345/0083320320a04760.jpg"
+                },
+                {
+                    "name": "碧浪洗衣原液夏日海风1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRurgX",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/476071/28/18013/227703/6a61e46bF1953c802/0083320320c7dad3.jpg"
+                },
+                {
+                    "name": "碧浪洗衣原液雨后初晴1.6斤瓶装去黄渍除菌除螨留香家用阴干洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRLF6d",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480386/39/11350/183153/6a61db97F8ac782af/00833203208aa67b.jpg"
+                },
+                {
+                    "name": "汰渍极净洗衣原液雨后山茶花1.6斤瓶装 去渍持久留香除菌除螨 洗衣液",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRb3pv",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/480431/39/11710/177437/6a61e45aF40fce748/0083320320278fe2.jpg"
+                },
+                {
+                    "name": "金纺高能护衣精华薰衣草小苍兰700G",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96RbJk5",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/350791/3/18295/93237/6900498eF19441b0c/aaa7a2d30b9ddfa6.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）快洗洗衣液洁净除味1.2kg 15分钟速净快洗专用",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRYCuE",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/264370/10/19627/154020/67aebb10F1260398b/c3c4fc297fb2c705.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）樱花去毛球持久留香2.4斤快洗速净洗衣液",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91RvMNi",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421631/29/10564/201147/69e8c141F523411d9/00833203200f0d47.jpg"
+                },
+                {
+                    "name": "OMO吴磊推荐快洗洗衣液白衣亮白2.4斤0荧光增白剂留香立白去黄",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRs9Fq",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
+                },
+                {
+                    "name": "奥妙5星精油香护洗衣液玉龙雪山玫瑰 2KG 清香香氛柔软护色去味",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91Rr07g",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/286113/23/12402/121723/68906f8eF0b90d937/e107e44f04670d0e.jpg"
+                },
+                {
+                    "name": "奥妙（OMO）小苍兰速净香氛持久留香运动去味2.4斤快洗洗衣液",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91Rgeh5",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/424955/31/54/130913/69e78ba5F75763264/00833203201353e0.jpg"
+                },
+                {
+                    "name": "OMO快洗洗衣液白衣亮白2.4斤0荧光增白剂留香立白去黄",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GHh0H3",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
+                },
+                {
+                    "name": "OMO快洗洗衣液白衣亮白2.4斤 不含荧光增白剂15分钟速净",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRvEvI",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419438/25/19795/159007/69e78b96Fd2034a07/008332032086ea1a.jpg"
+                }
+            ]
+        },
+        {
+            "name": "洗发护发",
+            "products": [
+                {
+                    "name": "套装潘婷赠京东家政2小时 胜肽泡弹发膜12ml*1颗+玫瑰单颗12ml*3颗",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRCIPL",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/417915/2/14716/128743/69e08e59Fc7c8531c/0083320320b71db6.jpg"
+                },
+                {
+                    "name": "套装潘婷赠京东家政2小时【赠完即止】三分钟奇迹桃桃护发素70ml*2",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DHhgHV",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473495/8/12312/139112/6a4f7351F1afd2623/00833203205d3c6e.jpg"
+                },
+                {
+                    "name": "海飞丝头皮肌底净爽止痒去屑洗发水360g男士女士【赠2小时家政】",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRDjiu",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472097/11/274/129597/6a437831F9d858f62/0083320320dc6e48.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】三明治金粹修护发膜180G",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRvO8F",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/423367/32/12392/158780/69eb61e0Fa162b657/0083320320a2dbbf.jpg"
+                },
+                {
+                    "name": "海飞丝玫瑰双抗洗发水360g控油蓬松香氛去屑男女士水杨酸洗头膏头皮肌底",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gROHx5",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/473905/14/1068/143370/6a45dfd5F5e70f6d7/0083320320ed4ff8.jpg"
+                },
+                {
+                    "name": "海飞丝头皮肌底控油蓬松洗发水360g去屑男女士【赠2小时家政】",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRwvbI",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/458504/26/19794/128973/6a4377f9F5876b027/0083320320fc4742.jpg"
+                },
+                {
+                    "name": "海飞丝头皮肌底盈润修护洗发水360g男士女士补水去屑【赠2小时家政】",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9rRv4y2",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/460835/38/16545/120083/6a437830F0c7ea3e6/00833203208c366b.jpg"
+                },
+                {
+                    "name": "套装潘婷赠京东家政2小时【赠完即止】3分钟护发素轻盈版小苍兰修护70ml*2",
+                    "price": "¥65.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DR2Utt",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/481927/35/3182/155610/6a574662Fce12da02/00833203207c466e.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】三分钟奇迹护发精油山茶花香40ml",
+                    "price": "¥69.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRv4tx",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/421819/13/1351/212384/69e08e5bF8cddfbee/0083400400083627.jpg"
+                },
+                {
+                    "name": "海飞丝去屑0硅油洗发水650ml呵护赋活男士女士",
+                    "price": "¥69.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9OR3C1i",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/464796/37/13274/169541/6a4377fcFdf54845c/008332032019dec2.jpg"
+                },
+                {
+                    "name": "海飞丝头皮预洗凝露10g*7控油蓬松改善油扁塌深层清洁【赠2小时家政】",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96RMJV1",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/463416/39/9524/147025/6a6031f3Fcea69370/008332032006ebc9.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】清柚苍兰香控油洗发水300g",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRINzu",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/425561/34/11430/147016/69f08a97F080464e7/00833203200e4738.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】三分钟迹桃桃洗发水白桃乌龙香300g",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORGvRr",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/428432/20/3010/127911/69f08a98Fa3a70173/0083320320d94ed3.jpg"
+                },
+                {
+                    "name": "海飞丝头皮肌底控油蓬松洗发水670g去屑男女士【赠2小时家政】",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96RwJf7",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/465746/26/19519/139409/6a4b194eFcb517b75/0083320320fc6798.jpg"
+                },
+                {
+                    "name": "海飞丝青少年洗发水360g控油蓬松去屑去味13-18岁青春期男女孩适用",
+                    "price": "¥70.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9DRbZJD",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472358/2/8174/129375/6a4b19c3F357cf050/00833203202e96dc.jpg"
+                },
+                {
+                    "name": "清扬抗屑调理头皮按摩精华50ml 小蓝盾净屑止痒润发",
+                    "price": "¥79.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9OR1MpF",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/270863/4/14117/83425/67eb563cF4824540c/c7a49baaa9eccabd.jpg"
+                },
+                {
+                    "name": "套装潘婷赠京东家政2小时 胜肽泡弹发膜12ml*1颗+玫瑰单颗12ml*7颗",
+                    "price": "¥79.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9rRn8ug",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/417199/37/19233/128795/69e08e57Fec726825/00833203204dc07a.jpg"
+                },
+                {
+                    "name": "潘婷3分钟奇迹洗发水茉莉山茶香470g",
+                    "price": "¥79.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9rRIPs7",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/472882/39/11069/155700/6a4f734fF1c2858f2/008332032006c3e1.jpg"
+                },
+                {
+                    "name": "海飞丝专研去屑控油洗发水300g专利配方男女洗头膏洗发露 赠2小时家政",
+                    "price": "¥79.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRYd2t",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/465757/27/10812/156820/6a43785fFbb9c76b3/0083320320d833dd.jpg"
+                },
+                {
+                    "name": "海飞丝专研去屑止痒洗发水300g配方舒痒男女洗头膏洗发露赠2小时家政",
+                    "price": "¥79.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRGQsp",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/471471/36/437/161416/6a43784eF09f8b2df/0083320320893e59.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】3分钟奇迹护发精油雪松玫瑰香90ml",
+                    "price": "¥89.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96RsbB0",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/419855/15/8903/141043/69e09303F2485841a/00833203202dc001.jpg"
+                },
+                {
+                    "name": "潘婷赠京东家政2小时【赠完即止】3分钟奇迹修护精华油清柚苍兰香90ml",
+                    "price": "¥89.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96Rv04M",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/442973/13/6775/119947/6a194bb6F17e55a10/008332032017cd4d.jpg"
+                },
+                {
+                    "name": "力士精油香氛洗发露470ml无花果铃兰香",
+                    "price": "¥90.00",
+                    "clean": "买2送2小时",
+                    "link": "https://u.jd.com/9GR6sIE",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/442915/7/8361/103258/6a1ea31eF6016dc00/0083320320dd1865.png"
+                },
+                {
+                    "name": "力士精油香氛洗发露470ml雪松栀子",
+                    "price": "¥90.00",
+                    "clean": "买2送2小时",
+                    "link": "https://u.jd.com/9rRLNnh",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/305369/12/25899/122083/68994fdaFf06a0fcd/bd8ff36ad5248c07.jpg"
+                },
+                {
+                    "name": "力士田曦薇同款精油香氛洗发露470ml雪松栀子",
+                    "price": "¥90.00",
+                    "clean": "买2送2小时",
+                    "link": "https://u.jd.com/9GRdxWU",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/305369/12/25899/122083/68994fdaFf06a0fcd/bd8ff36ad5248c07.jpg"
+                },
+                {
+                    "name": "套装髮の食谱发之食谱送京东家政2小时 冷萃茶柚洗发水280g+姜根茶洗发水280g",
+                    "price": "¥99.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9rRv3zk",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/479128/14/5173/149415/6a54e96bF89803683/0083320320957a5a.jpg"
+                },
+                {
+                    "name": "力士白桃茉莉香氛蓬松洗发水470gx2 玻尿酸洗发露",
+                    "price": "¥100.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9ORu3m9",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/291836/36/21907/56767/689064abFfc1d1039/fad8de84b187e86a.png"
+                },
+                {
+                    "name": "潘婷赠2小时京东家政【赠完即止】胶囊护发精油精华油柑橘留香50颗",
+                    "price": "¥129.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRu2Er",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447326/10/11968/121278/6a293edaF663f40a8/0083320320a515bd.jpg"
+                },
+                {
+                    "name": "NEXXUS檀健次同款 耐致弹性蛋白丰盈护理发膜200ml 蓬松高颅顶京东自营",
+                    "price": "¥218.00",
+                    "clean": "买1送2小时×2",
+                    "link": "https://u.jd.com/9aRiKv7",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/300131/36/5812/53331/6822198aFd576ad3c/9c9d1512c446d36d.jpg"
                 }
             ]
         },
@@ -713,156 +748,163 @@
             "products": [
                 {
                     "name": "小野轻煮干锅酱酱香500g瓶装 送2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjpoB5",
+                    "link": "https://u.jd.com/9gRdIz6",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/442946/27/16328/211328/6a23908bF4280f590/0083320320bde688.jpg"
                 },
                 {
                     "name": "乌江榨菜鲜爽榨菜丝70g*5袋 【赠70g*10袋+2小时家政】",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajEOJz",
+                    "link": "https://u.jd.com/9rRQI03",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/442696/26/15317/165344/6a228758F028e5e47/00833203202d48cc.jpg"
                 },
                 {
                     "name": "乌江 老重庆杂酱炸酱肉酱138g瓶 赠138g*2瓶+2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj1RTz",
+                    "link": "https://u.jd.com/9ORt6L2",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/450183/38/4702/166433/6a2284d1F6111da83/0083320320c6d299.jpg"
                 },
                 {
                     "name": "乌江榨菜 鲜爽榨菜丝 70g*5袋 赠70g*10袋+2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjveGK",
+                    "link": "https://u.jd.com/9DHmmnx",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/442696/26/15317/165344/6a228758F028e5e47/00833203202d48cc.jpg"
                 },
                 {
-                    "name": "盛源来海藻沙拉220g袋 赠220g*3袋+2小时家政",
-                    "price": "¥92.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjaW1t",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/445686/15/11739/247878/6a2263b7Ffa2c5db4/00833203202e2d83.jpg"
-                },
-                {
                     "name": "乌江微辣 鲜辣榨菜丝88g*5袋 赠88g*10袋+2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjTTsn",
+                    "link": "https://u.jd.com/96RIE1U",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/444706/3/13981/152387/6a22857dFa162f8b3/0083320320608d93.jpg"
                 },
                 {
-                    "name": "广晒阳江豆豉（60g*6）/组 赠（60g*6）*2组+2小时家政",
-                    "price": "¥92.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjAyOI",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/446137/5/12729/132171/6a226307Faf5cc600/00833203207a24fd.jpg"
-                },
-                {
                     "name": "乌江脆口榨菜芯 22g*12袋（量贩装）赠22g*24袋+2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jyoC9",
+                    "link": "https://u.jd.com/9aRMnKW",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/450690/10/3938/139410/6a228637Fe58c46b3/0083320320f687ae.jpg"
                 },
                 {
-                    "name": "家乐黑椒酸辣汤36g*5包 赠36g*10包+2小时家政",
-                    "price": "¥92.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Ojvvxm",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447713/19/6169/240542/6a227bd3Fb0287444/0083320320a57eb3.jpg"
-                },
-                {
                     "name": "乌江 清香美味榨菜丝88g*5袋 赠88g*10袋+2小时家政",
-                    "price": "¥92.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96j1Xi0",
+                    "link": "https://u.jd.com/9OR6vtu",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/445539/18/9949/147752/6a22845aF453cd0da/0083320320a6148c.jpg"
                 },
                 {
-                    "name": "王家渡招牌麻辣香锅调料200g/袋 赠200g*2袋+2小时家政",
-                    "price": "¥93.00 - ¥100.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjPxQy",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/453490/32/608/174074/6a2276cbF092a2569/0083320320c6b81e.jpg"
-                },
-                {
-                    "name": "日食记泰式椰香冬阴功火锅底料汤料 【拍1到手200g*3盒+2小时家政服务】",
-                    "price": "¥93.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjGnQG",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447980/24/6061/170309/6a227d76Fbd76c52f/00833203205f764d.jpg"
-                },
-                {
-                    "name": "日食记0脂寿喜锅汁火锅底料200g盒 赠200g*2盒+2小时家政",
-                    "price": "¥93.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gjZtSo",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/444580/23/13619/165486/6a227d75Fdccdae82/0083320320dd52bd.jpg"
-                },
-                {
                     "name": "玉梦贵州凯里红酸汤火锅底料1500g/瓶 赠1500g/瓶+2小时家政",
-                    "price": "¥97.00",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9rjSLQI",
+                    "link": "https://u.jd.com/9GR34We",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/446633/28/6047/210742/6a226b8bF6c7f9ee1/0083320320eab8bc.jpg"
                 },
                 {
-                    "name": "口味全 美式海盐黑胡椒粒研磨碎粉瓶148g 赠148g*2+2小时家政",
-                    "price": "¥98.00",
+                    "name": "盛源来海藻沙拉220g袋 赠220g*3袋+2小时家政",
+                    "price": "¥99.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9GjB9KU",
+                    "link": "https://u.jd.com/9GRbJrp",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/445686/15/11739/247878/6a2263b7Ffa2c5db4/00833203202e2d83.jpg"
+                },
+                {
+                    "name": "广晒阳江豆豉（60g*6）/组 赠（60g*6）*2组+2小时家政",
+                    "price": "¥99.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/91RgofV",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/446137/5/12729/132171/6a226307Faf5cc600/00833203207a24fd.jpg"
+                },
+                {
+                    "name": "家乐黑椒酸辣汤36g*5包 赠36g*10包+2小时家政",
+                    "price": "¥99.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/96HmX2g",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447713/19/6169/240542/6a227bd3Fb0287444/0083320320a57eb3.jpg"
+                },
+                {
+                    "name": "口味全进口黑胡椒粒研磨碎粉瓶110g/瓶 赠110g/瓶+2小时家政",
+                    "price": "¥100.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aRzenH",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447669/7/6022/106955/6a226ed3F53bc8106/008332032025ebca.jpg"
+                },
+                {
+                    "name": "口味全 美式海盐黑胡椒粒研磨碎粉瓶148g 赠148g*2+2小时家政",
+                    "price": "¥100.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9aHhCKQ",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/450649/4/3155/132743/6a226ff1Fcbbae98b/008332032098d7d2.jpg"
                 },
                 {
                     "name": "港东煲仔饭专用酱油500ml/瓶 赠500ml*2瓶+2小时家政",
-                    "price": "¥98.00",
+                    "price": "¥100.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9Dj6dUx",
+                    "link": "https://u.jd.com/9gRt4wY",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/445892/23/13956/199071/6a226f00Fb3f0913e/0083320320a0199b.jpg"
                 },
                 {
-                    "name": "盛源来 寿司食材工具套装11件 赠11件/套+2小时家政",
-                    "price": "¥98.00",
+                    "name": "王家渡招牌麻辣香锅调料200g/袋 赠200g*2袋+2小时家政",
+                    "price": "¥100.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9OjYbrx",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/446443/9/9478/244825/6a226397Fabf1ddb7/008332032022f912.jpg"
+                    "link": "https://u.jd.com/9ORravy",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/453490/32/608/174074/6a2276cbF092a2569/0083320320c6b81e.jpg"
+                },
+                {
+                    "name": "日食记泰式椰香冬阴功火锅底料汤料 【拍1到手200g*3盒+2小时家政服务】",
+                    "price": "¥100.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRreLZ",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447980/24/6061/170309/6a227d76Fbd76c52f/00833203205f764d.jpg"
+                },
+                {
+                    "name": "日食记0脂寿喜锅汁火锅底料200g盒 赠200g*2盒+2小时家政",
+                    "price": "¥100.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9gRvMYP",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/444580/23/13619/165486/6a227d75Fdccdae82/0083320320dd52bd.jpg"
                 },
                 {
                     "name": "小野轻煮干锅酱酱香150g瓶 赠150g*2瓶+2小时家政",
-                    "price": "¥98.00",
+                    "price": "¥105.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjpxI0",
+                    "link": "https://u.jd.com/9GRDvam",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/449810/38/3665/157809/6a23903aF0120d20f/0083320320b8b3a1.jpg"
                 },
                 {
-                    "name": "鱼泉榨菜 脆嫩爽口 精制榨菜丝60g*6袋 赠60g*12袋+2小时家政",
-                    "price": "¥98.00",
-                    "clean": "买1送2小时",
-                    "link": "https://u.jd.com/96jgbAL",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447003/29/6032/774116/6a227116F01bf9f69/0083320320cfb3a6.png"
-                },
-                {
                     "name": "郭小满肉蟹煲风味调料 酱香口味100g*2袋 赠100g*4袋+2小时家政",
-                    "price": "¥103.00",
+                    "price": "¥105.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajndvV",
+                    "link": "https://u.jd.com/9aR16Sx",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/446270/33/8601/241317/6a2393c1Ff6199d19/00833203201bfb07.jpg"
                 },
                 {
+                    "name": "盛源来 寿司食材工具套装11件 赠11件/套+2小时家政",
+                    "price": "¥105.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9GRuEPD",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/446443/9/9478/244825/6a226397Fabf1ddb7/008332032022f912.jpg"
+                },
+                {
+                    "name": "鱼泉榨菜 脆嫩爽口 精制榨菜丝60g*6袋 赠60g*12袋+2小时家政",
+                    "price": "¥105.00",
+                    "clean": "买1送2小时",
+                    "link": "https://u.jd.com/9rRqkgR",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/447003/29/6032/774116/6a227116F01bf9f69/0083320320cfb3a6.png"
+                },
+                {
                     "name": "SolshenVita蓝莓果酱纯熬0添加0脂宝宝蓝莓酱120g无添加蓝莓果酱大颗粒",
-                    "price": "¥140.00",
+                    "price": "¥145.00",
                     "clean": "买5送2小时",
-                    "link": "https://u.jd.com/9rjEEE9",
+                    "link": "https://u.jd.com/9aRCV5K",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/459635/10/5654/176576/6a33aebfF731b8ce3/00833203203ce1cd.png"
                 },
                 {
                     "name": "SolshenVita草莓果酱纯熬酱0添加0脂宝宝草莓酱120g无添加草莓果酱大颗粒果肉",
-                    "price": "¥28.00 - ¥30.00",
+                    "price": "¥29.00 - ¥30.00",
                     "clean": "买5送2小时",
-                    "link": "https://u.jd.com/9DjWy9a",
+                    "link": "https://u.jd.com/9ORCyLN",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/462138/2/862/213636/6a33af51F49685d16/0083320320ef2498.png"
                 }
             ]
@@ -872,9 +914,9 @@
             "products": [
                 {
                     "name": "鋪前三婆海南特产糟粕醋海鲜粉451g巨量装 赠451g/袋+2小时家政",
-                    "price": "¥93.00",
+                    "price": "¥100.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9gj6Tit",
+                    "link": "https://u.jd.com/91Ryg5H",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/445397/25/13017/267936/6a56f4adF5d8533f1/0083320320eb19c1.jpg"
                 }
             ]
@@ -884,17 +926,17 @@
             "products": [
                 {
                     "name": "妮维雅（NIVEA）新升级护肤品水活保湿精华乳双支小蓝管 生日礼物送男友",
-                    "price": "¥127.00",
+                    "price": "¥134.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9ajpXhC",
+                    "link": "https://u.jd.com/9GRivfo",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/392296/17/7408/93922/6979c42aFeed209b2/0083320320c5a4a3.jpg"
                 },
                 {
                     "name": "妮维雅（NIVEA）男士【节日礼盒】补水保湿套装礼盒(洁+乳+霜) 护肤品 生日礼物",
-                    "price": "¥328.00",
+                    "price": "¥334.00",
                     "clean": "买2送2小时×2",
-                    "link": "https://u.jd.com/91jyhw7",
-                    "img": "https://img14.360buyimg.com/pop/jfs/t1/479283/7/10128/134961/6a5dfb31F71670729/0083320320df31be.jpg"
+                    "link": "https://u.jd.com/9rROfQv",
+                    "img": "https://img14.360buyimg.com/pop/jfs/t1/486573/27/3617/137954/6a61ea21Fe71e2d32/0083320320bd6cbe.jpg"
                 }
             ]
         },
@@ -902,17 +944,17 @@
             "name": "白酒",
             "products": [
                 {
-                    "name": "舍得自在 29度 浓香型白酒 368ml*2瓶*3盒  礼盒箱装",
-                    "price": "¥1313.00",
+                    "name": "舍得自在 29度 浓香型白酒 368ml*2瓶*3盒 礼盒箱装",
+                    "price": "¥1197.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjOfMX",
+                    "link": "https://u.jd.com/9rRLVoA",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/387775/34/19576/61416/697b51efFa3c0d9f5/00833203207a733c.png"
                 },
                 {
                     "name": "舍得自在 29度 浓香型白酒 500ml*6瓶 整箱装",
-                    "price": "¥1967.00 - ¥1974.00",
+                    "price": "¥1934.00",
                     "clean": "买1送2小时",
-                    "link": "https://u.jd.com/9DjZBp2",
+                    "link": "https://u.jd.com/9GR18Y6",
                     "img": "https://img14.360buyimg.com/pop/jfs/t1/333374/29/6129/60936/68b199abFe24379d2/c66695d900bb3d92.png"
                 }
             ]
