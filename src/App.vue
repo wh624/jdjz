@@ -1,6 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { categories } from './data/jdjz_products.json'
+import { ref, computed, onMounted } from 'vue'
 import SiteHeader from './components/SiteHeader.vue'
 import CategoryNav from './components/CategoryNav.vue'
 import ProductSection from './components/ProductSection.vue'
@@ -17,8 +16,23 @@ const activeTab = ref('all')
 const activeCategory = ref('all')
 const search = ref('')
 
+// 商品数据从 public/data/jdjz_products.json 运行时请求（可被链接直接访问、支持热更新）
+const data = ref({ categories: [], updateInfo: {}, keywords: [] })
+const categories = computed(() => data.value.categories || [])
+const updateInfo = computed(() => data.value.updateInfo || {})
+
+onMounted(async () => {
+  try {
+    const res = await fetch('data/jdjz_products.json')
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    data.value = await res.json()
+  } catch (e) {
+    console.error('加载商品数据失败：', e)
+  }
+})
+
 const allProducts = computed(() =>
-  categories.flatMap((c) => c.products.map((p) => ({ ...p, category: c.name })))
+  categories.value.flatMap((c) => c.products.map((p) => ({ ...p, category: c.name })))
 )
 
 const matchSearch = (p) => {
@@ -42,7 +56,7 @@ const groups = computed(() => {
   const q = search.value.trim()
 
   if (activeTab.value === 'all') {
-    return categories
+    return categories.value
       .filter((c) => activeCategory.value === 'all' || c.name === activeCategory.value)
       .map((c) => ({
         name: c.name,
@@ -62,7 +76,7 @@ const groups = computed(() => {
 </script>
 
 <template>
-  <SiteHeader  />
+  <SiteHeader :update-info="updateInfo" />
 
   <CategoryNav
     :tabs="tabs"

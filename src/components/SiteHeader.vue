@@ -1,5 +1,10 @@
 <script setup>
-import { updateInfo } from '../data/jdjz_products.json'
+const props = defineProps({
+  updateInfo: {
+    type: Object,
+    default: () => ({})
+  }
+})
 
 </script>
 
