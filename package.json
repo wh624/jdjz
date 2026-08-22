@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update:data": "node scripts/update-products.mjs",
+    "update:data:dry": "node scripts/update-products.mjs --dry-run"
   },
   "dependencies": {
     "vue": "^3.4.0"

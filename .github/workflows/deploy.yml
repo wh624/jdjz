@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 定时更新数据的工作流用 GITHUB_TOKEN 推送时不会触发 push 事件，
+  # 所以这里用 workflow_run 在数据更新完成后自动重新部署
+  workflow_run:
+    workflows: ['Update products data']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,10 +21,14 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          # 被「数据更新」工作流触发时，拉取它刚提交的那次数据更新
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v5

@@ -1,0 +1,55 @@
+name: Update products data
+
+on:
+  schedule:
+    # GitHub Actions 使用 UTC 时间：13:30 UTC = 21:30 北京时间
+    # 需要一天多次可再加一行，例如 '0 4 * * *'（12:00 北京时间）
+    - cron: '30 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Fetch & convert links via 京推推
+        env:
+          # ---- 京推推账号密码（必需）----
+          JTT_USERNAME: ${{ secrets.JTT_USERNAME }}
+          JTT_PASSWORD: ${{ secrets.JTT_PASSWORD }}
+          # ---- 京推推联盟推广位（必需）----
+          JTT_UNION_ID: ${{ secrets.JTT_UNION_ID }}
+          JTT_POSITION_ID: ${{ secrets.JTT_POSITION_ID }}
+          # ---- 数据源配置（必需，除 Cookie/UA 可选外）----
+          JDJZ_SOURCE_URL: ${{ secrets.JDJZ_SOURCE_URL }}
+          JDJZ_SOURCE_COOKIE: ${{ secrets.JDJZ_SOURCE_COOKIE }}
+          JDJZ_SOURCE_UA: ${{ secrets.JDJZ_SOURCE_UA }}
+          JDJZ_MIN_PRODUCTS: ${{ secrets.JDJZ_MIN_PRODUCTS }}
+          JDJZ_IMAGE_SIZE: ${{ secrets.JDJZ_IMAGE_SIZE }}
+        run: node scripts/update-products.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if [ -z "$(git status --porcelain public/data/jdjz_products.json)" ]; then
+            echo "数据无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/jdjz_products.json
+          git commit -m "chore(data): 自动更新京东家政赠品清单"
+          git push
