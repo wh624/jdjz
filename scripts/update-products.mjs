@@ -390,7 +390,7 @@ async function main() {
 
   const categories = parseCategories(html)
   const total = categories.reduce((sum, c) => sum + c.products.length, 0)
-  const { date, updatedAt, declaredTotal } = parseUpdateInfo(html)
+  const { declaredTotal } = parseUpdateInfo(html)
 
   log(`解析到 ${categories.length} 个分类 / ${total} 件商品：`)
   categories.forEach((c) => log(`  - ${c.name}：${c.products.length} 件`))
@@ -415,7 +415,8 @@ async function main() {
   const keywords = Array.isArray(previous?.keywords) && previous.keywords.length ? previous.keywords : DEFAULT_KEYWORDS
 
   const data = {
-    updateInfo: { date, updatedAt, total: finalTotal },
+    // updateInfo 反映「本次脚本运行时间」（北京时间），而非源站页面上的旧时间戳
+    updateInfo: { date: beijingNow(true), updatedAt: beijingNow(), total: finalTotal },
     keywords,
     categories: kept
   }
