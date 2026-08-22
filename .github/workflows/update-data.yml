@@ -1,9 +1,10 @@
 name: Update products data
 
 on:
-  schedule:
-    - cron: '50 8,13,20 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '56 8,13,20 * * *'
+      timezone: 'Asia/Shanghai'
 
 permissions:
   contents: write
