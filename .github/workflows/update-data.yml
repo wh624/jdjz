@@ -2,9 +2,11 @@ name: Update products data
 
 on:
   schedule:
-    # GitHub Actions 使用 UTC 时间：13:30 UTC = 21:30 北京时间
-    # 需要一天多次可再加一行，例如 '0 4 * * *'（12:00 北京时间）
-    - cron: '30 13 * * *'
+    # GitHub Actions 使用 UTC 时间；北京时间 = UTC+8
+    #   8:30 北京时间 = 0:30 UTC
+    #   13:30 北京时间 = 5:30 UTC
+    #   20:30 北京时间 = 12:30 UTC
+    - cron: '30 0,5,12 * * *'
   workflow_dispatch:
 
 permissions:
