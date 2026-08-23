@@ -27,8 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          # 被「数据更新」工作流触发时，拉取它刚提交的那次数据更新
-          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
+          # 被「数据更新」工作流触发时，拉取 main 最新提交（已含刚 push 的数据更新）
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v5
