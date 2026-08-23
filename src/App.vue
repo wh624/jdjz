@@ -23,7 +23,8 @@ const updateInfo = computed(() => data.value.updateInfo || {})
 
 onMounted(async () => {
   try {
-    const res = await fetch('data/jdjz_products.json')
+    // 完全不缓存：每次进入都强制向服务器拉取最新数据
+    const res = await fetch('data/jdjz_products.json', { cache: 'no-store' })
     if (!res.ok) throw new Error('HTTP ' + res.status)
     data.value = await res.json()
   } catch (e) {
