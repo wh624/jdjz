@@ -83,10 +83,65 @@ const stripTags = (html = '') => decodeEntities(html.replace(/<[^>]*>/g, ' ').re
 const stripScripts = (html = '') =>
   html.replace(/<script\b[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '')
 
-/** 京东图片统一换成大图尺寸：/n0/s142x142_jfs/... -> /n0/s800x800_jfs/...（imageSize 为空则保留原图） */
+/**
+ * 京东图片统一换成大图尺寸：
+ *   /n0/s142x142_jfs/... -> /n0/s800x800_jfs/...
+ * imageSize 为空时默认用 s800x800（保证封面清晰），设置则用指定尺寸。
+ */
 function normalizeImage(url = '') {
-  if (!url || !CONFIG.imageSize) return url
-  return url.replace(/\/s\d+x\d+_jfs\//, `/${CONFIG.imageSize}_jfs/`)
+  if (!url) return url
+  const target = CONFIG.imageSize || 's800x800'
+  if (/\/n0\/s\d+x\d+_jfs\//.test(url)) {
+    return url.replace(/\/n0\/s\d+x\d+_jfs\//, `/n0/${target}_jfs/`)
+  }
+  return url.replace(/\/s\d+x\d+_jfs\//, `/${target}_jfs/`)
+}
+
+/** 估算图片清晰度优先级：360buy 商品图最高，data: 占位图最差 */
+function imageScore(url = '') {
+  if (!url) return -1
+  if (url.startsWith('data:')) return -2
+  if (/360buyimg\.com/.test(url)) return 100
+  if (/jd\.com|jdl\.com/.test(url)) return 50
+  return 0
+}
+
+/**
+ * 从卡片区块中提取「商品封面图」高清地址：
+ * - 遍历区块内所有 <img>，收集 srcset（取最大尺寸）/ data-src / data-original / src 候选
+ * - 优先选 360buyimg 商品图，并选分辨率/尺寸最高者，避免首图是缩略图或占位图
+ */
+function extractImage(block = '') {
+  const imgs = [...block.matchAll(/<img\b([^>]*)>/g)]
+  let best = ''
+  let bestScore = -Infinity
+  for (const m of imgs) {
+    const tag = m[1]
+    const cands = []
+    const ssm = tag.match(/srcset="([^"]*)"/)
+    if (ssm) {
+      for (const part of ssm[1].split(',').map((s) => s.trim())) {
+        const um = part.match(/^\s*(https?:\/\/\S+)/)
+        if (!um) continue
+        const wm = part.match(/(\d+)w\s*$/)
+        const w = wm ? parseInt(wm[1], 10) : 0
+        cands.push({ url: um[1], score: w })
+      }
+    }
+    const src = tag.match(/src="([^"]*)"/)?.[1]
+    if (src) cands.push({ url: src, score: 0 })
+    const ds = tag.match(/data-src="([^"]*)"/)?.[1] || tag.match(/data-original="([^"]*)"/)?.[1]
+    if (ds) cands.push({ url: ds, score: 60 })
+    for (const c of cands) {
+      if (c.url.startsWith('data:') || /placeholder|loading\.|gray|empty|spacer/i.test(c.url)) continue
+      const score = imageScore(c.url) * 100000 + c.score
+      if (score > bestScore) {
+        bestScore = score
+        best = c.url
+      }
+    }
+  }
+  return best
 }
 
 /** 北京时间 yyyy-MM-dd HH:mm:ss */
@@ -144,7 +199,6 @@ const RE = {
   sku: /data-umami-event-sku="([^"]*)"/,
   price: /data-umami-event-price="([^"]*)"/,
   link: /href="(https?:\/\/[^"]*(?:u\.jd\.com|jd\.com)[^"]*)"/,
-  img: /<img[^>]+src="(https?:\/\/[^"]+)"/,
   clean: />\s*(买\s*[\d.]+\s*送\s*[\d.]+\s*小时[^<]*)</,
   priceText: /¥\s*([\d.]+)/,
   giftBlock: /bg-emerald-50[\s\S]*$/
@@ -174,7 +228,7 @@ function parseProducts(sectionHtml) {
     const product = {
       name,
       link: block.match(RE.link)?.[1] || '',
-      img: normalizeImage(block.match(RE.img)?.[1] || ''),
+      img: normalizeImage(extractImage(block)),
       price: (block.match(RE.price)?.[1] || block.match(RE.priceText)?.[1] || '').trim(),
       sku
     }
@@ -189,9 +243,14 @@ function parseProducts(sectionHtml) {
       map.set(sku, product)
       return
     }
-    // 合并两套 DOM 中互补的字段
+    // 合并两套 DOM 中互补的字段；图片优先保留更清晰的版本
     for (const [k, v] of Object.entries(product)) {
-      if (v && !exist[k]) exist[k] = v
+      if (!v) continue
+      if (k === 'img') {
+        if (imageScore(v) > imageScore(exist[k] || '')) exist.img = v
+        continue
+      }
+      if (!exist[k]) exist[k] = v
     }
   })
 
@@ -424,6 +483,7 @@ async function main() {
 
   if (CONFIG.dryRun) {
     log('--dry-run：跳过写入')
+    categories.flatMap((c) => c.products).slice(0, 5).forEach((p) => log(`  示例封面图 [${p.name}] -> ${p.img}`))
     return
   }
 
