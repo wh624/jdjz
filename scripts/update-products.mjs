@@ -85,14 +85,18 @@ const stripScripts = (html = '') =>
 
 /**
  * 京东图片统一换成大图尺寸：
- *   /n0/s142x142_jfs/... -> /n0/s800x800_jfs/...
+ *   /n0/s200x200_jfs/... -> /n0/s800x800_jfs/...
+ *   /n1/jfs/...（无尺寸段的原图）-> /n0/s800x800_jfs/...
  * imageSize 为空时默认用 s800x800（保证封面清晰），设置则用指定尺寸。
  */
 function normalizeImage(url = '') {
   if (!url) return url
   const target = CONFIG.imageSize || 's800x800'
-  if (/\/n0\/s\d+x\d+_jfs\//.test(url)) {
-    return url.replace(/\/n0\/s\d+x\d+_jfs\//, `/n0/${target}_jfs/`)
+  if (/\/n\d+\/s\d+x\d+_jfs\//.test(url)) {
+    return url.replace(/\/n\d+\/s\d+x\d+_jfs\//, `/n0/${target}_jfs/`)
+  }
+  if (/\/n\d+\/jfs\//.test(url)) {
+    return url.replace(/\/n\d+\/jfs\//, `/n0/${target}_jfs/`)
   }
   return url.replace(/\/s\d+x\d+_jfs\//, `/${target}_jfs/`)
 }
@@ -107,37 +111,34 @@ function imageScore(url = '') {
 }
 
 /**
- * 从卡片区块中提取「商品封面图」高清地址：
- * - 遍历区块内所有 <img>，收集 srcset（取最大尺寸）/ data-src / data-original / src 候选
- * - 优先选 360buyimg 商品图，并选分辨率/尺寸最高者，避免首图是缩略图或占位图
+ * 从卡片区块中提取「商品封面图」地址：
+ * - 优先取 <figure class="jl-product-card__media"> 内的商品主图，避免误取凑单搭配图
+ * - 每个 <img> 收集 src / srcset / data-src 候选，按域名可信度打分
+ * - 源站输出的都是 s100x100~s200x200 缩略图，最终统一由 normalizeImage 换成大图尺寸
  */
 function extractImage(block = '') {
-  const imgs = [...block.matchAll(/<img\b([^>]*)>/g)]
+  const media = block.match(/<figure\b[^>]*jl-product-card__media[\s\S]*?<\/figure>/)?.[0]
+  const scope = media || block
+  const imgs = [...scope.matchAll(/<img\b([^>]*)>/g)]
   let best = ''
   let bestScore = -Infinity
   for (const m of imgs) {
     const tag = m[1]
     const cands = []
-    const ssm = tag.match(/srcset="([^"]*)"/)
-    if (ssm) {
-      for (const part of ssm[1].split(',').map((s) => s.trim())) {
-        const um = part.match(/^\s*(https?:\/\/\S+)/)
-        if (!um) continue
-        const wm = part.match(/(\d+)w\s*$/)
-        const w = wm ? parseInt(wm[1], 10) : 0
-        cands.push({ url: um[1], score: w })
-      }
+    const src = tag.match(/\bsrc="([^"]*)"/)?.[1]
+    if (src) cands.push(src)
+    for (const part of (tag.match(/\bsrcset="([^"]*)"/)?.[1] || '').split(',')) {
+      const url = part.trim().match(/^(https?:\/\/\S+)/)?.[1]
+      if (url) cands.push(url)
     }
-    const src = tag.match(/src="([^"]*)"/)?.[1]
-    if (src) cands.push({ url: src, score: 0 })
-    const ds = tag.match(/data-src="([^"]*)"/)?.[1] || tag.match(/data-original="([^"]*)"/)?.[1]
-    if (ds) cands.push({ url: ds, score: 60 })
-    for (const c of cands) {
-      if (c.url.startsWith('data:') || /placeholder|loading\.|gray|empty|spacer/i.test(c.url)) continue
-      const score = imageScore(c.url) * 100000 + c.score
+    const ds = tag.match(/\bdata-src="([^"]*)"/)?.[1] || tag.match(/\bdata-original="([^"]*)"/)?.[1]
+    if (ds) cands.push(ds)
+    for (const url of cands) {
+      if (url.startsWith('data:') || /placeholder|loading\.|gray|empty|spacer/i.test(url)) continue
+      const score = imageScore(url)
       if (score > bestScore) {
         bestScore = score
-        best = c.url
+        best = url
       }
     }
   }
@@ -194,105 +195,166 @@ async function fetchText(url, { retries = 3 } = {}) {
 
 /* --------------------------------- HTML 解析 -------------------------------- */
 
-const RE = {
-  name: /data-umami-event-name="([^"]*)"/,
-  sku: /data-umami-event-sku="([^"]*)"/,
-  price: /data-umami-event-price="([^"]*)"/,
-  link: /href="(https?:\/\/[^"]*(?:u\.jd\.com|jd\.com)[^"]*)"/,
-  clean: />\s*(买\s*[\d.]+\s*送\s*[\d.]+\s*小时[^<]*)</,
-  priceText: /¥\s*([\d.]+)/,
-  giftBlock: /bg-emerald-50[\s\S]*$/
+/**
+ * 源站（Astro 静态站）当前结构：整页一个扁平商品网格 #deal-grid，每件商品一张卡片
+ *
+ *   <article class="jl-product-card jl-product-card--direct"
+ *            data-sku data-category data-promotion-kind data-default-plan
+ *            data-promotion-label data-price data-available-days data-has-gift ...>
+ *     <a class="jl-product-card__primary" href="https://u.jd.com/xxx"
+ *        data-umami-event-name data-umami-event-sku data-umami-event-price>
+ *       <h3 class="jl-product-card__name">…</h3>
+ *       <strong class="jl-product-card__condition">买3件</strong>
+ *       <span class="jl-product-card__price"><small>¥</small>89<em>.70</em></span>
+ *       <div class="jl-product-card__benefit"><strong>家政/除螨二选一</strong>…</div>
+ *       <p class="jl-product-card__service-terms">…</p>
+ *       <p class="jl-product-card__other-gifts">另赠 …</p>
+ *     </a>
+ *   </article>
+ *
+ * 两类特殊卡片：
+ *   - data-promotion-kind="add-on"（可凑单）：整张卡是 <button> + 购买方案 <dialog>，
+ *     没有 jl-product-card__primary 单品链接；同一 sku 另有一张 data-default-plan="false"
+ *     的隐藏卡片，代表「只买这款」的单品方案，本脚本取后者，语义与 JSON 的单品结构一致。
+ *   - 其余卡片均为 data-default-plan="true" 的单品方案。
+ * 因此「取所有带 jl-product-card__primary 的卡片并按 sku 去重」正好等于页面声明的商品总数。
+ */
+const CARD_RE = /<article\b[^>]*\bclass="[^"]*jl-product-card[^"]*"[\s\S]*?<\/article>/g
+
+const attr = (tag = '', name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
+
+const CARD_SEL = {
+  primary: /<a\b([^>]*\bclass="[^"]*jl-product-card__primary[^"]*"[^>]*)>/,
+  name: /class="jl-product-card__name"[^>]*>([\s\S]*?)<\/h3>/,
+  condition: /class="jl-product-card__condition"[^>]*>([^<]*)</,
+  priceBox: /class="jl-product-card__price"[^>]*>([\s\S]*?)<\/span>/,
+  benefit: /class="jl-product-card__benefit"[^>]*>([\s\S]*?)<\/div>/,
+  otherGifts: /class="jl-product-card__other-gifts"[^>]*>([\s\S]*?)<\/p>/,
+  otherGiftsTitle: /class="jl-product-card__other-gifts"[^>]*\btitle="([^"]*)"/,
+  serviceTerms: /class="jl-product-card__service-terms"[^>]*>([\s\S]*?)<\/p>/
 }
 
-/** 提取单张卡片里的赠品文案 */
-function parseGift(block) {
-  const giftHtml = block.match(RE.giftBlock)?.[0]
-  if (!giftHtml || !giftHtml.includes('赠品')) return ''
-  const items = [...giftHtml.matchAll(/>([^<>]+)</g)]
-    .map((m) => decodeEntities(m[1]))
-    .filter((t) => t && !/^[·\s]*$/.test(t) && !t.includes('赠品') && !t.includes('🎁'))
-  return [...new Set(items)].join('；')
+/** 「买3件」+「家政/除螨二选一 ×2」+「送 2小时家政」-> 「买3送4小时」 */
+function buildClean(cardOpen, block) {
+  const condition = decodeEntities(block.match(CARD_SEL.condition)?.[1] || '').replace(/\s+/g, '')
+  const qty = condition.match(/(\d+)/)?.[1]
+  const benefit = stripTags(block.match(CARD_SEL.benefit)?.[1] || '')
+  // 赠送时长优先取 data-search-text 里的「送 2小时家政」，其次退回赠品名里的小时数
+  const searchText = decodeEntities(attr(cardOpen, 'data-search-text') || '')
+  const hourText = searchText.match(/送\s*([\d.]+)\s*小时/)?.[1] || benefit.match(/([\d.]+)\s*小时/)?.[1]
+  const copies = Number(benefit.match(/[×xX]\s*(\d+)/)?.[1] || 1)
+
+  if (qty && hourText) {
+    const hours = Number(hourText) * copies
+    return `买${qty}送${Number.isInteger(hours) ? hours : hours.toFixed(1)}小时`
+  }
+  // 兜底：拼接源站原始文案，保证 badge 至少有内容
+  const label = decodeEntities(attr(cardOpen, 'data-promotion-label') || '')
+  return [condition, benefit || label].filter(Boolean).join(' ').trim()
 }
 
-/** 解析一个分类区块里的所有商品（移动端卡片 + 桌面端卡片是同一商品的两套 DOM，按 sku 去重合并） */
-function parseProducts(sectionHtml) {
-  const marks = [...sectionHtml.matchAll(/<div class="(?:mobile-card|card bg-white)/g)].map((m) => m.index)
+/** 「另赠 舒肤佳柔护沐浴露山茶花香200g ×2」-> 「舒肤佳柔护沐浴露山茶花香200g ×2」 */
+function parseGift(cardOpen, block) {
+  if (attr(cardOpen, 'data-has-gift') === 'false') return ''
+  const raw =
+    decodeEntities(block.match(CARD_SEL.otherGiftsTitle)?.[1] || '') ||
+    stripTags(block.match(CARD_SEL.otherGifts)?.[1] || '')
+  return raw.replace(/^另赠\s*/, '').trim()
+}
+
+/** 解析整页所有商品卡片，按 sku 去重后返回扁平数组（含 category 字段，供后续分组） */
+function parseProducts(html) {
   const map = new Map()
 
-  marks.forEach((start, i) => {
-    const block = sectionHtml.slice(start, marks[i + 1] ?? sectionHtml.length)
-    const sku = block.match(RE.sku)?.[1]?.trim()
-    const name = decodeEntities(block.match(RE.name)?.[1] || '')
-    if (!sku || !name) return
+  for (const match of html.matchAll(CARD_RE)) {
+    const block = match[0]
+    const cardOpen = block.match(/<article\b[^>]*>/)?.[0] || ''
+
+    // 可凑单卡片没有单品链接，跳过（同 sku 的「只买这款」隐藏卡片会被解析到）
+    const primaryTag = block.match(CARD_SEL.primary)?.[1]
+    if (!primaryTag) continue
+
+    const sku = (attr(cardOpen, 'data-sku') || attr(primaryTag, 'data-umami-event-sku') || '').trim()
+    const name =
+      decodeEntities(attr(primaryTag, 'data-umami-event-name') || '') ||
+      stripTags(block.match(CARD_SEL.name)?.[1] || '')
+    if (!sku || !name || map.has(sku)) continue
+
+    const link = attr(primaryTag, 'href') || ''
+    if (!/^https?:\/\/[^/]*(?:u\.jd\.com|jd\.com)/i.test(link)) continue
+
+    // 价格：优先 umami 埋点上的到手价，其次 data-price（分），最后从价格 DOM 拼回
+    const cents = Number(attr(cardOpen, 'data-price'))
+    const priceDom = stripTags(block.match(CARD_SEL.priceBox)?.[1] || '').replace(/[¥\s]/g, '')
+    const price =
+      attr(primaryTag, 'data-umami-event-price') ||
+      (Number.isFinite(cents) && cents > 0 ? (cents / 100).toFixed(2) : '') ||
+      priceDom
 
     const product = {
       name,
-      link: block.match(RE.link)?.[1] || '',
+      link,
       img: normalizeImage(extractImage(block)),
-      price: (block.match(RE.price)?.[1] || block.match(RE.priceText)?.[1] || '').trim(),
-      sku
+      price: String(price || '').trim(),
+      sku,
+      category: decodeEntities(attr(cardOpen, 'data-category') || '') || '其他'
     }
-    const clean = decodeEntities(block.match(RE.clean)?.[1] || '').replace(/\s+/g, '')
-    if (clean) product.clean = clean
-    const gift = parseGift(block)
-    if (gift) product.gift = gift
-    if (/限地域/.test(block)) product.regionLimited = true
 
-    const exist = map.get(sku)
-    if (!exist) {
-      map.set(sku, product)
-      return
-    }
-    // 合并两套 DOM 中互补的字段；图片优先保留更清晰的版本
-    for (const [k, v] of Object.entries(product)) {
-      if (!v) continue
-      if (k === 'img') {
-        if (imageScore(v) > imageScore(exist[k] || '')) exist.img = v
-        continue
-      }
-      if (!exist[k]) exist[k] = v
-    }
-  })
+    const clean = buildClean(cardOpen, block)
+    if (clean) product.clean = clean
+    const gift = parseGift(cardOpen, block)
+    if (gift) product.gift = gift
+    const terms = stripTags(block.match(CARD_SEL.serviceTerms)?.[1] || '')
+    if (/限地域|仅限下单地址/.test(terms)) product.regionLimited = true
+
+    map.set(sku, product)
+  }
 
   return [...map.values()]
 }
 
+/** 筛选面板里的分类顺序即源站自己的排序，用它决定输出分类顺序 */
+function parseCategoryOrder(html) {
+  const panel = html.match(/name="deal-category"[\s\S]*?<\/fieldset>/)?.[0] || ''
+  return [...panel.matchAll(/name="deal-category" value="([^"]*)"/g)]
+    .map((m) => decodeEntities(m[1]))
+    .filter((v) => v && v !== 'all')
+}
+
 function parseCategories(html) {
-  const viewIndex = html.indexOf('id="category-view"')
-  const scoped = viewIndex === -1 ? html : html.slice(viewIndex)
-  const mainEnd = scoped.indexOf('</main>')
-  const scope = mainEnd > 0 ? scoped.slice(0, mainEnd) : scoped
+  const products = parseProducts(html)
+  const order = parseCategoryOrder(html)
+  const buckets = new Map()
 
-  const starts = [...scope.matchAll(/<section\b[^>]*>/g)].map((m) => m.index)
-  const categories = []
-  const seenSku = new Set()
+  for (const product of products) {
+    const { category, ...rest } = product
+    if (!buckets.has(category)) buckets.set(category, [])
+    buckets.get(category).push(rest)
+  }
 
-  starts.forEach((start, i) => {
-    const chunk = scope.slice(start, starts[i + 1] ?? scope.length)
-    const name = stripTags(chunk.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/)?.[1] || '')
-      .replace(/\d+\s*件$/, '')
-      .trim()
-    if (!name) return
-
-    const products = parseProducts(chunk).filter((p) => {
-      if (seenSku.has(p.sku)) return false
-      seenSku.add(p.sku)
-      return true
-    })
-    if (products.length) categories.push({ name, products })
+  const names = [...buckets.keys()].sort((a, b) => {
+    const ia = order.indexOf(a)
+    const ib = order.indexOf(b)
+    // 筛选面板里没有的分类排到末尾，保持彼此的出现顺序
+    return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) - (ib === -1 ? Number.MAX_SAFE_INTEGER : ib)
   })
 
-  return categories
+  return names.map((name) => ({ name, products: buckets.get(name) }))
 }
 
 function parseUpdateInfo(html) {
-  const date = html.match(/(\d{4})年(\d{2})月(\d{2})日/)
-  const updatedAt = html.match(/更新于\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/)
-  const declaredTotal = html.match(/(\d+)\s*件商品/)
+  // 页面声明的商品总数：新版「160 款商品」，兼容旧版「160 件商品」
+  const declaredTotal = html.match(/([\d,]+)\s*款商品/) || html.match(/([\d,]+)\s*件商品/)
+  // 源站数据时间戳（毫秒）写在每张卡片的 data-update-time 上，取最大值
+  const stamps = [...html.matchAll(/data-update-time="(\d+)"/g)].map((m) => Number(m[1])).filter(Number.isFinite)
+  const sourceUpdatedAt = stamps.length ? new Date(Math.max(...stamps)) : null
   return {
-    date: date ? `${date[1]}年${date[2]}月${date[3]}日` : beijingNow(true),
-    updatedAt: updatedAt ? updatedAt[1].replace(/\s+/, ' ') : beijingNow(),
-    declaredTotal: declaredTotal ? Number(declaredTotal[1]) : 0
+    date: beijingNow(true),
+    updatedAt: beijingNow(),
+    declaredTotal: declaredTotal ? Number(declaredTotal[1].replace(/,/g, '')) : 0,
+    sourceUpdatedAt: sourceUpdatedAt
+      ? sourceUpdatedAt.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false })
+      : ''
   }
 }
 
@@ -389,8 +451,17 @@ async function applyJttLinks(categories) {
     Array.from({ length: CONCURRENCY }, async () => {
       while (queue.length) {
         const product = queue.shift()
-        if (cache.has(product.link)) {
-          if (cache.get(product.link)) product.link = cache.get(product.link)
+        // 源站偶尔出现多个 sku 共用同一条短链，用原始链接做 key 复用转链结果
+        const original = product.link
+        if (cache.has(original)) {
+          const cached = cache.get(original)
+          if (cached) {
+            product.link = cached
+            ok += 1
+          } else {
+            product.__jttFailed = true
+            failed += 1
+          }
           continue
         }
         let chain
@@ -407,11 +478,11 @@ async function applyJttLinks(categories) {
         }
         if (chain) {
           product.link = chain
-          cache.set(product.link, chain)
+          cache.set(original, chain)
           ok += 1
         } else {
           product.__jttFailed = true
-          cache.set(product.link, '')
+          cache.set(original, '')
           failed += 1
           warn(`转链失败，将删除该商品：${product.name} -> ${lastErr?.message}`)
         }
@@ -449,8 +520,9 @@ async function main() {
 
   const categories = parseCategories(html)
   const total = categories.reduce((sum, c) => sum + c.products.length, 0)
-  const { declaredTotal } = parseUpdateInfo(html)
+  const { declaredTotal, sourceUpdatedAt } = parseUpdateInfo(html)
 
+  if (sourceUpdatedAt) log(`源站数据时间：${sourceUpdatedAt}`)
   log(`解析到 ${categories.length} 个分类 / ${total} 件商品：`)
   categories.forEach((c) => log(`  - ${c.name}：${c.products.length} 件`))
 
@@ -482,8 +554,8 @@ async function main() {
   const output = `${JSON.stringify(data, null, 2)}\n`
 
   if (CONFIG.dryRun) {
-    log('--dry-run：跳过写入')
-    categories.flatMap((c) => c.products).slice(0, 5).forEach((p) => log(`  示例封面图 [${p.name}] -> ${p.img}`))
+    log('--dry-run：跳过写入，以下为解析样例（link 仍为源站原始链接）')
+    console.log(JSON.stringify(categories.flatMap((c) => c.products).slice(0, 3), null, 2))
     return
   }
 
@@ -493,7 +565,12 @@ async function main() {
   log(before === output ? `内容无变化：${path.relative(ROOT, CONFIG.outFile)}` : `已写入：${path.relative(ROOT, CONFIG.outFile)}`)
 }
 
-main().catch((err) => {
-  console.error('[jdjz] 更新失败：', err.message)
-  process.exit(1)
-})
+// 直接执行时跑主流程；被 import 时只导出解析函数（便于本地/单测核对解析结果）
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((err) => {
+    console.error('[jdjz] 更新失败：', err.message)
+    process.exit(1)
+  })
+}
+
+export { stripScripts, parseProducts, parseCategories, parseUpdateInfo }
