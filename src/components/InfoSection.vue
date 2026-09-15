@@ -8,17 +8,12 @@ const toggle = (i) => (open.value = open.value === i ? -1 : i)
 
 <template>
   <section class="info">
-    <h2 class="section-title">关于京东家政赠品活动</h2>
+    <h2 class="section-title">购买与预约须知</h2>
     <div class="qa">
-      <div
-        v-for="(item, i) in jdActivities"
-        :key="i"
-        class="qa-item"
-        :class="{ open: open === i }"
-      >
+      <div v-for="(item, i) in jdActivities" :key="i" class="qa-item">
         <button class="qa-head" @click="toggle(i)">
           <span>{{ item.q }}</span>
-          <span class="arrow">{{ open === i ? '−' : '+' }}</span>
+          <i :class="{ open: open === i }"></i>
         </button>
         <div v-show="open === i" class="qa-body">
           <p v-for="(line, j) in item.a.split('\n')" :key="j">{{ line }}</p>
@@ -29,21 +24,16 @@ const toggle = (i) => (open.value = open.value === i ? -1 : i)
 </template>
 
 <style scoped>
-.info {
-  margin-top: 30px;
-}
 .qa {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
   background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.qa-item {
-  border-bottom: 1px solid var(--border);
+
+.qa-item + .qa-item {
+  border-top: 1px solid #f5f5f5;
 }
-.qa-item:last-child {
-  border-bottom: none;
-}
+
 .qa-head {
   width: 100%;
   display: flex;
@@ -51,47 +41,53 @@ const toggle = (i) => (open.value = open.value === i ? -1 : i)
   justify-content: space-between;
   gap: 12px;
   text-align: left;
-  padding: 14px 16px;
+  padding: 14px 12px;
   font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
+  color: #333;
 }
-.qa-head:hover {
-  background: #fafafa;
+
+.qa-head i {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid #ccc;
+  border-bottom: 1.5px solid #ccc;
+  transform: rotate(45deg);
+  margin-top: -4px;
 }
-.arrow {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--primary-soft);
-  color: var(--primary);
-  display: grid;
-  place-items: center;
-  font-weight: 700;
+
+.qa-head i.open {
+  transform: rotate(225deg);
+  margin-top: 4px;
 }
+
 .qa-body {
-  padding: 0 16px 14px;
-  color: #555;
+  padding: 0 12px 14px;
+  color: #666;
   font-size: 13px;
   line-height: 1.8;
 }
-.qa-body p {
-  margin-bottom: 6px;
+
+.qa-body p + p {
+  margin-top: 6px;
 }
-.about {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px 18px;
-}
-.about p {
-  font-size: 13px;
-  line-height: 1.9;
-  color: #555;
-  margin-bottom: 10px;
-}
-.about p:last-child {
-  margin-bottom: 0;
+
+@media (min-width: 960px) {
+  .qa {
+    border-radius: 0;
+    border: 1px solid #eee;
+  }
+
+  .qa-head {
+    padding: 16px 18px;
+  }
+
+  .qa-head:hover {
+    color: var(--jd);
+  }
+
+  .qa-body {
+    padding: 0 18px 16px;
+  }
 }
 </style>

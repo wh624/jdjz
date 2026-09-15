@@ -32,19 +32,14 @@ const getFlag = (name) => {
 }
 
 const CONFIG = {
-  // ⚠️ 以下变量全部从环境变量（GitHub Repository secrets）注入，脚本内不写任何默认值。
+  // ⚠️ 敏感配置从环境变量（GitHub Repository secrets）注入，脚本内不写默认值。
   // 缺少必需项时脚本会直接报错退出，避免用错误配置覆盖线上数据。
   /** 数据源页面地址（必需，从 secret 读取） */
   sourceUrl: getFlag('source') || process.env.JDJZ_SOURCE_URL || '',
-  /** 源站需要 Cookie / 特定 UA 时使用（可选，留空则不附加） */
-  cookie: process.env.JDJZ_SOURCE_COOKIE || '',
-  userAgent: process.env.JDJZ_SOURCE_UA || '',
   /** 输出文件 */
   outFile: path.resolve(ROOT, getFlag('out') || process.env.JDJZ_OUTPUT || 'public/data/jdjz_products.json'),
-  /** 少于该数量视为源站改版/抓取失败，直接报错（可选，未设置按 30 校验） */
-  minProducts: Number(process.env.JDJZ_MIN_PRODUCTS || 30),
-  /** 商品图统一尺寸，留空则保留源站原图 */
-  imageSize: process.env.JDJZ_IMAGE_SIZE || '',
+  /** 少于该数量视为源站改版/抓取失败，直接报错 */
+  minProducts: 30,
   dryRun: hasFlag('dry-run'),
   /** 京推推换链：账号密码、unionId、positionId 均从 Repository secrets 注入（无默认值） */
   jtt: {
@@ -87,11 +82,10 @@ const stripScripts = (html = '') =>
  * 京东图片统一换成大图尺寸：
  *   /n0/s200x200_jfs/... -> /n0/s800x800_jfs/...
  *   /n1/jfs/...（无尺寸段的原图）-> /n0/s800x800_jfs/...
- * imageSize 为空时默认用 s800x800（保证封面清晰），设置则用指定尺寸。
  */
 function normalizeImage(url = '') {
   if (!url) return url
-  const target = CONFIG.imageSize || 's800x800'
+  const target = 's800x800'
   if (/\/n\d+\/s\d+x\d+_jfs\//.test(url)) {
     return url.replace(/\/n\d+\/s\d+x\d+_jfs\//, `/n0/${target}_jfs/`)
   }
@@ -167,17 +161,15 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 async function fetchText(url, { retries = 3 } = {}) {
   let lastErr
-  const ua = CONFIG.userAgent || JTT_UA
   for (let i = 1; i <= retries; i += 1) {
     try {
       const res = await fetch(url, {
         redirect: 'follow',
         signal: AbortSignal.timeout(30_000),
         headers: {
-          'user-agent': ua,
+          'user-agent': JTT_UA,
           accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'accept-language': 'zh-CN,zh;q=0.9',
-          ...(CONFIG.cookie ? { cookie: CONFIG.cookie } : {})
+          'accept-language': 'zh-CN,zh;q=0.9'
         }
       })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)

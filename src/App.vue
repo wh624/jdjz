@@ -16,14 +16,13 @@ const activeTab = ref('all')
 const activeCategory = ref('all')
 const search = ref('')
 
-// 商品数据从 public/data/jdjz_products.json 运行时请求（可被链接直接访问、支持热更新）
 const data = ref({ categories: [], updateInfo: {}, keywords: [] })
 const categories = computed(() => data.value.categories || [])
 const updateInfo = computed(() => data.value.updateInfo || {})
+const keywords = computed(() => data.value.keywords || [])
 
 onMounted(async () => {
   try {
-    // 完全不缓存：每次进入都强制向服务器拉取最新数据
     const res = await fetch('data/jdjz_products.json', { cache: 'no-store' })
     if (!res.ok) throw new Error('HTTP ' + res.status)
     data.value = await res.json()
@@ -41,7 +40,6 @@ const matchSearch = (p) => {
   return !q || p.name.includes(q)
 }
 
-// 用于头部/导航的「共 N 件」统计（不含分组）
 const resultCount = computed(() => {
   let list = allProducts.value.filter(matchSearch)
   if (activeTab.value === 'gift') list = list.filter((p) => p.gift)
@@ -52,7 +50,6 @@ const resultCount = computed(() => {
   return list.length
 })
 
-// 分组展示
 const groups = computed(() => {
   const q = search.value.trim()
 
@@ -66,34 +63,64 @@ const groups = computed(() => {
       .filter((g) => g.products.length > 0)
   }
 
-  // 其余 tab 使用平铺列表
   let list = allProducts.value.filter(matchSearch)
   if (activeTab.value === 'gift') list = list.filter((p) => p.gift)
   if (activeTab.value === 'bookable') list = list.filter((p) => p.bookable !== false)
-  // recent：展示全部（数据无时间戳，按原始顺序）
   return list.length ? [{ name: '', products: list }] : []
 })
-
 </script>
 
 <template>
-  <SiteHeader :update-info="updateInfo" />
+  <div class="sticky-head">
+    <SiteHeader
+      :update-info="updateInfo"
+      :search="search"
+      :result-count="resultCount"
+      :keywords="keywords"
+      @update:search="search = $event"
+    />
+    <CategoryNav
+      :tabs="tabs"
+      :active-tab="activeTab"
+      :categories="categories"
+      :active-category="activeCategory"
+      @update:active-tab="activeTab = $event"
+      @update:active-category="activeCategory = $event"
+    />
+  </div>
 
-  <CategoryNav
-    :tabs="tabs"
-    :active-tab="activeTab"
-    :categories="categories"
-    :active-category="activeCategory"
-    :search="search"
-    :result-count="resultCount"
-    @update:active-tab="activeTab = $event"
-    @update:active-category="activeCategory = $event"
-    @update:search="search = $event"
-  />
-
-  <main>
-    <ProductSection :groups="groups" />
-  </main>
-
-  <InfoSection />
+  <div class="page">
+    <main>
+      <ProductSection :groups="groups" />
+    </main>
+    <InfoSection />
+    <footer class="site-foot">价格、库存与赠品以京东结算页为准，本站仅整理线索</footer>
+  </div>
 </template>
+
+<style scoped>
+.sticky-head {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.site-foot {
+  margin-top: 24px;
+  padding: 16px 4px 8px;
+  color: #bbb;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+  .sticky-head {
+    position: static;
+  }
+
+  .site-foot {
+    text-align: left;
+    margin-top: 32px;
+  }
+}
+</style>

@@ -1,6 +1,17 @@
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   product: { type: Object, required: true }
+})
+
+const priceParts = computed(() => {
+  const raw = String(props.product.price || '').replace(/[¥￥,\s]/g, '')
+  const [intPart, decPart = ''] = raw.split('.')
+  return {
+    int: intPart || '0',
+    dec: decPart.padEnd(2, '0').slice(0, 2)
+  }
 })
 </script>
 
@@ -13,30 +24,27 @@ defineProps({
     rel="noopener noreferrer"
   >
     <div class="thumb">
-      <img
-        v-if="product.img"
-        :src="product.img"
-        :alt="product.name"
-        loading="lazy"
-      />
-      <div v-else class="thumb-empty">🛒</div>
+      <img v-if="product.img" :src="product.img" :alt="product.name" loading="lazy" />
+      <div v-else class="thumb-empty">暂无图片</div>
+      <span v-if="product.clean" class="ribbon">{{ product.clean }}</span>
     </div>
 
-    <div class="badge">{{ product.clean }}</div>
+    <div class="body">
+      <h3 class="name">{{ product.name }}</h3>
 
-    <h3 class="name">{{ product.name }}</h3>
+      <div class="tags">
+        <span class="tag">第8天可约</span>
+        <span v-if="product.gift" class="tag">另赠</span>
+        <span v-if="product.regionLimited" class="tag warn">限地域</span>
+      </div>
 
-    <p class="bookable">第8天可约 · 7天有效</p>
+      <p v-if="product.gift" class="gift">{{ product.gift }}</p>
 
-    <div class="gift" v-if="product.gift">
-      <span class="gift-tag">🎁 赠品</span>
-      <span class="gift-text">{{ product.gift }}</span>
-    </div>
-
-    <div class="footer">
       <div class="price">
-        <span class="price-label">到手约</span>
-        <span class="price-value">{{ product.price }}</span>
+        <em>¥</em>
+        <strong>{{ priceParts.int }}</strong>
+        <i>.{{ priceParts.dec }}</i>
+        <span class="label">到手约</span>
       </div>
     </div>
   </component>
@@ -44,111 +52,176 @@ defineProps({
 
 <style scoped>
 .card {
-  position: relative;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px 16px 14px;
-  box-shadow: var(--shadow);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  overflow: hidden;
-  text-decoration: none;
   color: inherit;
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
-}
-a.card:hover {
-  cursor: pointer;
-}
+
 .thumb {
-  display: block;
-  width: 100%;
+  position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--border);
-  margin-bottom: 2px;
+  background: #f7f7f7;
 }
+
 .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.2s ease;
 }
-.thumb:hover img {
-  transform: scale(1.05);
-}
+
 .thumb-empty {
-  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  background: #f3f4f6;
+  display: grid;
+  place-items: center;
+  color: #ccc;
+  font-size: 12px;
 }
-.badge {
+
+.ribbon {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: var(--primary);
+  left: 0;
+  top: 8px;
+  background: var(--jd);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 4px 10px;
-  border-bottom-left-radius: 10px;
+  line-height: 18px;
+  padding: 0 6px 0 8px;
+  border-radius: 0 10px 10px 0;
 }
+
+.body {
+  padding: 8px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
 .name {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  padding-right: 70px;
-  min-height: 42px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
-.bookable {
-  font-size: 12px;
-  color: #2a8f5a;
-  background: #eafaf1;
-  align-self: flex-start;
-  padding: 2px 8px;
-  border-radius: 6px;
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
+
+.tag {
+  height: 16px;
+  line-height: 14px;
+  padding: 0 4px;
+  border: 1px solid #ffb0aa;
+  color: var(--jd);
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.tag.warn {
+  color: #d48806;
+  border-color: #ffe58f;
+}
+
 .gift {
-  font-size: 12px;
-  background: #fff7e6;
-  border: 1px dashed #ffd591;
-  border-radius: 8px;
-  padding: 6px 8px;
-  color: #ad6800;
-  line-height: 1.5;
+  font-size: 11px;
+  color: #d48806;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.gift-tag {
-  font-weight: 700;
-  margin-right: 4px;
-}
-.footer {
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px dashed var(--border);
-}
+
 .price {
+  margin-top: auto;
   display: flex;
   align-items: baseline;
-  gap: 6px;
+  color: var(--jd);
 }
-.price-label {
+
+.price em,
+.price i {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.price em {
   font-size: 12px;
-  color: var(--text-muted);
+  margin-right: 1px;
 }
-.price-value {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--primary);
+
+.price strong {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1;
+}
+
+.price i {
+  font-size: 12px;
+}
+
+.price .label {
+  margin-left: 4px;
+  font-size: 11px;
+  color: #bbb;
+  font-weight: 400;
+}
+
+@media (min-width: 960px) {
+  .card {
+    border-radius: 0;
+    border: 1px solid transparent;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: var(--jd);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+  }
+
+  .body {
+    padding: 10px 12px 12px;
+    gap: 8px;
+  }
+
+  .name {
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+  }
+
+  .name:hover {
+    color: var(--jd);
+  }
+
+  .gift {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .price strong {
+    font-size: 22px;
+  }
+
+  .ribbon {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 </style>

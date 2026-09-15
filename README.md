@@ -32,7 +32,7 @@ node scripts/update-products.mjs --source=https://example.com/xxx --out=tmp.json
 - 解析数量低于阈值（默认 30 件）时**直接报错且不写文件**，避免源站改版把线上数据洗空；
 - `keywords` 字段会沿用原 JSON 中已有的配置。
 
-### 环境变量（全部来自 Repository secrets，脚本不含任何默认值）
+### 环境变量（全部来自 Repository secrets）
 
 脚本的换链由**京推推**完成：先拿账号密码登录拿到 `token`，再逐条调用京推推转链接口把 `u.jd.com` 链接换成你自己的推广短链。登录、取 Cookie、转链全部由脚本自动完成。
 
@@ -45,10 +45,6 @@ node scripts/update-products.mjs --source=https://example.com/xxx --out=tmp.json
 | `JTT_UNION_ID` | **必填** | 京推推联盟 ID（unionId） |
 | `JTT_POSITION_ID` | **必填** | 京推推推广位 ID（positionid） |
 | `JDJZ_SOURCE_URL` | **必填** | 数据源页面地址 |
-| `JDJZ_SOURCE_COOKIE` | 可选 | 源站需要登录/风控校验时填 Cookie 原文；留空则不附加 |
-| `JDJZ_SOURCE_UA` | 可选 | 自定义 User-Agent；留空则用脚本内置 Chrome UA |
-| `JDJZ_MIN_PRODUCTS` | 可选 | 最少商品数校验阈值（解析阶段与转链后都会校验），未设置时按 `30` 校验 |
-| `JDJZ_IMAGE_SIZE` | 可选 | 商品图统一尺寸（`s800x800` 等），留空则保留源站原图 |
 
 > 转链时若某条链接失败，脚本会**重试 2 次**，仍失败则删除该商品（与京推推换链话术一致）；转链后商品数低于阈值会直接中止写入并报警，避免误清空线上数据。
 > 本地调试时把以上变量写到 `.env` 里自行 `export` 即可，`.env` 已在 `.gitignore` 中忽略。

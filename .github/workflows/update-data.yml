@@ -33,12 +33,8 @@ jobs:
           # ---- 京推推联盟推广位（必需）----
           JTT_UNION_ID: ${{ secrets.JTT_UNION_ID }}
           JTT_POSITION_ID: ${{ secrets.JTT_POSITION_ID }}
-          # ---- 数据源配置（必需，除 Cookie/UA 可选外）----
+          # ---- 数据源配置（必需）----
           JDJZ_SOURCE_URL: ${{ secrets.JDJZ_SOURCE_URL }}
-          JDJZ_SOURCE_COOKIE: ${{ secrets.JDJZ_SOURCE_COOKIE }}
-          JDJZ_SOURCE_UA: ${{ secrets.JDJZ_SOURCE_UA }}
-          JDJZ_MIN_PRODUCTS: ${{ secrets.JDJZ_MIN_PRODUCTS }}
-          JDJZ_IMAGE_SIZE: ${{ secrets.JDJZ_IMAGE_SIZE }}
         run: node scripts/update-products.mjs
 
       - name: Commit and push if changed
