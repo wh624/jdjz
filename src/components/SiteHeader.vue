@@ -3,10 +3,11 @@ defineProps({
   updateInfo: { type: Object, default: () => ({}) },
   search: { type: String, default: '' },
   resultCount: { type: Number, default: 0 },
-  keywords: { type: Array, default: () => [] }
+  keywords: { type: Array, default: () => [] },
+  activeCategory: { type: String, default: 'all' }
 })
 
-const emit = defineEmits(['update:search'])
+const emit = defineEmits(['update:search', 'pick-keyword'])
 </script>
 
 <template>
@@ -45,8 +46,8 @@ const emit = defineEmits(['update:search'])
         :key="word"
         type="button"
         class="hot"
-        :class="{ on: search === word }"
-        @click="emit('update:search', search === word ? '' : word)"
+        :class="{ on: activeCategory === word || search === word }"
+        @click="emit('pick-keyword', word)"
       >
         {{ word }}
       </button>

@@ -52,8 +52,6 @@ const CONFIG = {
   }
 }
 
-const DEFAULT_KEYWORDS = ['牙膏', '洗衣', '洗发', '护发', '发膜', '沐浴', '身体乳']
-
 const log = (...args) => console.log('[jdjz]', ...args)
 const warn = (...args) => console.warn('[jdjz]', ...args)
 
@@ -331,7 +329,15 @@ function parseCategories(html) {
     return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) - (ib === -1 ? Number.MAX_SAFE_INTEGER : ib)
   })
 
-  return names.map((name) => ({ name, products: buckets.get(name) }))
+  return sortByProductCount(names.map((name) => ({ name, products: buckets.get(name) })))
+}
+
+/** 分类按商品数从多到少；数量相同则保持源站筛选面板里的先后 */
+function sortByProductCount(categories) {
+  return categories
+    .map((cat, index) => ({ cat, index }))
+    .sort((a, b) => b.cat.products.length - a.cat.products.length || a.index - b.index)
+    .map(({ cat }) => cat)
 }
 
 function parseUpdateInfo(html) {
@@ -526,7 +532,7 @@ async function main() {
   }
 
   // 步骤②+③：京推推登录并转链，转链失败的商品会被删除
-  const kept = await applyJttLinks(categories)
+  const kept = sortByProductCount(await applyJttLinks(categories))
   if (!kept.length) throw new Error('全部商品转链失败，疑似京推推账号异常，已中止写入避免清空数据')
   const finalTotal = kept.reduce((sum, c) => sum + c.products.length, 0)
   if (finalTotal < CONFIG.minProducts) {
@@ -535,7 +541,9 @@ async function main() {
   if (finalTotal < total) warn(`转链后商品数 ${finalTotal}（原始 ${total}），已删除 ${total - finalTotal} 个失败项`)
 
   const previous = await readPrevious()
-  const keywords = Array.isArray(previous?.keywords) && previous.keywords.length ? previous.keywords : DEFAULT_KEYWORDS
+  // 每次抓取按源站实时分类重写，顺序与按商品数排好的 categories 一致
+  const keywords = kept.map((c) => c.name).filter(Boolean)
+  log(`keywords（按商品数）：${keywords.join('、')}`)
 
   const data = {
     // updateInfo 反映「本次脚本运行时间」（北京时间），而非源站页面上的旧时间戳

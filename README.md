@@ -24,13 +24,13 @@ node scripts/update-products.mjs --source=https://example.com/xxx --out=tmp.json
 
 脚本行为：
 
-- 解析源站的扁平商品网格（`<article class="jl-product-card" data-sku data-category …>`），按 `data-category` 归类，分类顺序沿用源站筛选面板；
+- 解析源站的扁平商品网格（`<article class="jl-product-card" data-sku data-category …>`），按 `data-category` 归类；分类按商品数从多到少排，数量相同则沿用源站筛选面板顺序；
 - 每个商品输出 `name / link / img / price / sku / clean（买X送Y小时）/ gift（额外赠品）/ regionLimited（限地域）`；
 - 「可凑单」商品在源站是购买方案弹窗，脚本取同一 sku 的「只买这款」单品方案，保证每件商品都有单品链接与到手价；
 - 商品图统一转成 `s800x800` 大图；
 - 会把商品链接换成**自己账号**的推广短链（`u.jd.com/xxx`）；
 - 解析数量低于阈值（默认 30 件）时**直接报错且不写文件**，避免源站改版把线上数据洗空；
-- `keywords` 字段会沿用原 JSON 中已有的配置。
+- `categories` 与 `keywords` 都取源站当前分类，并按该分类商品数从多到少排列；每次抓取重写，不沿用旧关键词。
 
 ### 环境变量（全部来自 Repository secrets）
 

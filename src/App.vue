@@ -50,6 +50,18 @@ const resultCount = computed(() => {
   return list.length
 })
 
+function onPickKeyword(word) {
+  const hit = categories.value.some((c) => c.name === word)
+  if (hit) {
+    search.value = ''
+    activeTab.value = 'all'
+    activeCategory.value = activeCategory.value === word ? 'all' : word
+    return
+  }
+  activeCategory.value = 'all'
+  search.value = search.value === word ? '' : word
+}
+
 const groups = computed(() => {
   const q = search.value.trim()
 
@@ -77,7 +89,9 @@ const groups = computed(() => {
       :search="search"
       :result-count="resultCount"
       :keywords="keywords"
+      :active-category="activeCategory"
       @update:search="search = $event"
+      @pick-keyword="onPickKeyword"
     />
     <CategoryNav
       :tabs="tabs"
